@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Каталог</title>
+  </head>
+  <body>
+    <!--Главная навигация-->
+    <header class="main-header">
+      <nav class="main-nav">
+        <div class="container">
+          <a href="index.html" class="main-nav-logo logo">
+            <img class="main-nav-logo-img logo-img" src="img/logo.svg" width="139" height="70" alt="Логотип Sedona">
+          </a>
+          <ul class="main-nav-list site-navigation-list">
+            <li class="main-nav-item site-navigation-item">
+              <a href="#" class="main-nav-link site-navigation-link">Главная</a>
+            </li>
+            <li class="main-nav-item site-navigation-item">
+              <a href="#" class="main-nav-link site-navigation-link">О Седоне</a>
+            </li>
+            <li class="main-nav-item site-navigation-item">
+              <a href="catalog.html" class="main-nav-link main-nav-link-current site-navigation-link">Гостиницы</a>
+            </li>
+          </ul>
+          <ul class="main-nav-list user-nav-list">
+            <li class="main-nav-item user-nav-item">
+              <span class="favorite">
+                <span class="visually-hidden">Избранное</span>
+              </span>
+              <a href="#" class="main-nav-link user-nav-link">Избранное</a>
+            </li>
+            <li class="main-nav-item site-navigation-item">
+              <span class="search">
+                <span class="visually-hidden">Поиск</span>
+              </span>
+              <a href="#" class="main-nav-link user-nav-link">Поиск</a>
+            </li>
+            <li class="main-nav-item user-nav-item">
+              <a href="#" class="btn main-nav-link user-nav-link">Хочу сюда!</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!--Главная страница каталога-->
+    <main class="main-inner">
+      <header class="inner-header">
+        <h1 class="inner-header-title">Каталог</h1>
+      </header>
+      <!--Фильтр-->
+
+      <!--Рассылка-->
+      <section class="mailling">
+        <div class="container">
+          <h3 class="mailling-title">Подпишитесь на рассылку</h3>
+          <p class="mailling-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
+          <form class="mailling-subscribe" action="#" method="post">
+            <label class="visually-hidden" for="subscibe-email">Ваш e-mail</label>
+            <input class="subscribe-field" type="email" id="subscibe-email" name="subscibe-email" placeholder="Ваш e-mail">
+            <button class="subscribe-button" type="submit">Подписаться</button>
+          </form>
+        </div>
+      </section>
+    </main>
+     <!--Подвал-->
+     <footer class="footer">
+      <div class="container">
+        <ul class="socials-list">
+          <li class="socials-item">
+            <a class="socials-link socials-link-twitter" href="https://twitter.com/htmlacademy_ru"><span class="visually-hidden">Twitter</span></a>
+          </li>
+          <li class="socials-item">
+            <a class="socials-link socials-link-facebook" href="https://www.facebook.com/htmlacademy"><span class="visually-hidden">Facebook</span></a>
+          </li>
+          <li class="socials-item">
+            <a class="socials-link socials-link-youtube" href="https://www.youtube.com/c/HTMLAcademyRUS"><span class="visually-hidden">Youtube</span></a>
+          </li>
+        </ul>
+        <address class="footer-contacts">
+          <a  class="phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+        </address>
+        <div class="footer-logo">
+          <a href="index.html" class="footer-logo-link">
+            <img class="footer-logo-img" src="img/logo-footer.svg" width="115" height="33" alt=".htmlacademy">
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+  </html>
