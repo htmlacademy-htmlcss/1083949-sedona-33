@@ -11,7 +11,7 @@
       <nav class="main-nav">
         <div class="container">
           <a href="index.html" class="main-nav-logo logo">
-            <img class="main-nav-logo-img logo-img" src="img/logo.svg" width="139" height="70" alt="Логотип Sedona">
+            <img class="main-nav-logo-img logo-img" src="img/logo.svg" width="139" height="70" alt="Логотип Sedona.">
           </a>
           <ul class="main-nav-list site-navigation-list">
             <li class="main-nav-item site-navigation-item">
@@ -26,10 +26,8 @@
           </ul>
           <ul class="main-nav-list user-nav-list">
             <li class="main-nav-item user-nav-item">
-              <span class="favorite">
-                <span class="visually-hidden">Избранное</span>
-              </span>
-              <a href="#" class="main-nav-link user-nav-link">Избранное</a>
+              <a href="#" class="main-nav-link user-nav-link">
+                <span class="visually-hidden">Избранное</span></a>
             </li>
             <li class="main-nav-item site-navigation-item">
               <span class="search">
@@ -49,19 +47,85 @@
       <header class="inner-header">
         <h1 class="inner-header-title">Каталог</h1>
       </header>
-      <!--Фильтр-->
+      <!--Блок каталога с фильтром-->
+      <section class="filter">
+        <div class="container">
+          <h2 class="filter-title">Гостиницы Седоны</h2>
+          <!--Хлебные крошки-->
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs-item">
+              <span class="breadcrumbs-main">
+                <span class="visually-hidden">Главная</span>
+              </span>
+              <a class="breadcrumbs-link" href="index.html">Главная</a>
+            </li>
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-link">Каталог</a>
+            </li>
+          </ul>
+          <!--Фильтр-->
+          <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+            <fieldset class="catalog-filter-group">
+              <legend class="catalog-filter-title">Инфраструктура:</legend>
+              <ul class="catalog-filter-list">
+                <li class="catalog-filter-item">
+                  <label class="control">
+                    <input class="control-input" type="checkbox" name="swimming-pool" checked>
+                     Бассейн
+                  </label>
+                </li>
+                <li class="catalog-filter-item">
+                  <label class="control">
+                    <input class="control-input" type="checkbox" name="parking" checked>
+                    Парковка
+                  </label>
+                </li>
+                  <li class="catalog-filter-item">
+                    <label class="control">
+                      <input class="control-input" type="checkbox" name="Wi-Fi">
+                      Wi-Fi
+                    </label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="catalog-filter-group">
+              <legend class="catalog-filter-title">Тип жилья::</legend>
+              <ul class="catalog-filter-list">
+                <li class="catalog-filter-item">
+                  <label class="control">
+                    <input class="control-input" type="checkbox" name="hostel" checked>
+                    Гостиница
+                  </label>
+                </li>
+                <li class="catalog-filter-item">
+                  <label class="control">
+                    <input class="control-input" type="checkbox" name="motel">
+                    Мотель
+                  </label>
+                </li>
+                  <li class="catalog-filter-item">
+                    <label class="control">
+                      <input class="control-input" type="checkbox" name="appartaments">
+                      Апартаменты
+                    </label>
+                </li>
+              </ul>
+            </fieldset>
+            <button class="button" type="submit">Применить</button>
+            <button class="reset" type="reset">Сбросить</button>
+          </form>
+        </div>
+      </section>
 
       <!--Рассылка-->
       <section class="mailling">
-        <div class="container">
-          <h3 class="mailling-title">Подпишитесь на рассылку</h3>
+          <h2 class="mailling-title">Подпишитесь на рассылку</h2>
           <p class="mailling-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
-          <form class="mailling-subscribe" action="#" method="post">
+          <form class="mailling-subscribe" action="https://echo.htmlacademy.ru" method="post">
             <label class="visually-hidden" for="subscibe-email">Ваш e-mail</label>
             <input class="subscribe-field" type="email" id="subscibe-email" name="subscibe-email" placeholder="Ваш e-mail">
             <button class="subscribe-button" type="submit">Подписаться</button>
           </form>
-        </div>
       </section>
     </main>
      <!--Подвал-->
@@ -69,13 +133,19 @@
       <div class="container">
         <ul class="socials-list">
           <li class="socials-item">
-            <a class="socials-link socials-link-twitter" href="https://twitter.com/htmlacademy_ru"><span class="visually-hidden">Twitter</span></a>
+            <a class="socials-link socials-link-twitter" href="https://twitter.com/htmlacademy_ru">
+              <span class="visually-hidden">Twitter</span>
+            </a>
           </li>
           <li class="socials-item">
-            <a class="socials-link socials-link-facebook" href="https://www.facebook.com/htmlacademy"><span class="visually-hidden">Facebook</span></a>
+            <a class="socials-link socials-link-facebook" href="https://www.facebook.com/htmlacademy">
+              <span class="visually-hidden">Facebook</span>
+            </a>
           </li>
           <li class="socials-item">
-            <a class="socials-link socials-link-youtube" href="https://www.youtube.com/c/HTMLAcademyRUS"><span class="visually-hidden">Youtube</span></a>
+            <a class="socials-link socials-link-youtube" href="https://www.youtube.com/c/HTMLAcademyRUS">
+              <span class="visually-hidden">Youtube</span>
+            </a>
           </li>
         </ul>
         <address class="footer-contacts">
@@ -83,7 +153,7 @@
         </address>
         <div class="footer-logo">
           <a href="index.html" class="footer-logo-link">
-            <img class="footer-logo-img" src="img/logo-footer.svg" width="115" height="33" alt=".htmlacademy">
+            <img class="footer-logo-img" src="img/logo-footer.svg" width="115" height="33" alt="разработано в htmlacademy.">
           </a>
         </div>
       </div>
