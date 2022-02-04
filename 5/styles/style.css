@@ -14,9 +14,25 @@
   font-display: swap;
 }
 
+:root {
+  --color-black: #000000;
+  --color-dark: #333333;
+  --color-gray: #e5e5e5;
+  --color-light: #f2f2f2;
+  --color-white: #ffffff;
+  --color-light-brown: #756257;
+  --color-dark-brown: #615048;
+  --color-light-green: #7db54f;
+  --color-dark-green: #6c9e42;
+  --color-light-blue: #83b3d3;
+  --color-dark-blue: #68a2ca;
+  --color-cold-light: rgba(131, 179, 211, 0.12);
+  --color-warm-light: rgba(131, 179, 211, 0.2);
+}
+
 .visually-hidden {
   position: absolute;
-  clip:rect(1px, 1px,1px,1px);
+  clip:rect(1px, 1px, 1px, 1px);
   padding: 0;
   border: 0;
   height: 1px;
@@ -30,23 +46,23 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
-  color: #333333;
-  background-color: #f2f2f2;
+  color: var(--color-dark, #333333);
+  background-color: var(--color-light);
 }
 
 /* Шапка */
 .main-header {
-  color: #000000;
-  background-color: #ffffff;
+  color: var(--color-black);
+  background-color: var(--color-white);
 }
 
 .main-nav-link {
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
-  color: #000000;
+  color: var(--color-black);
   text-align: center;
-  background-color: #ffffff;
+  background-color: var(--color-white);
   text-decoration: none;
 }
 
@@ -55,8 +71,8 @@ body {
   line-height: 13px;
   text-align: center;
   letter-spacing: -0.1em;
-  color: #ffffff;
-  background-color: #7DB54F;
+  color: var(--color-white);
+  background-color: var(--color-light-green);
   border-radius: 10px;
 }
 
@@ -66,13 +82,13 @@ body {
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
-  color: #ffffff;
-  background-color: #756257;
+  color: var(--color-white);
+  background-color: var(--color-light-brown);
 }
 
 /* Промо */
 .promo {
-  background-color: #ffffff;
+  background-color: var(--color-white);
 }
 
 .promo-title {
@@ -81,7 +97,7 @@ body {
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
-  color: #000000;
+  color: var(--color-black);
 }
 
 .promo-text {
@@ -89,13 +105,13 @@ body {
   font-weight: 400;
   line-height: 36px;
   text-align: center;
-  color: #333333;
+  color: var(--color-dark);
 }
 
 /* Преимущества */
 
 .privilege {
-  background-color: #ffffff;
+  background-color: var(--color-white);
 }
 
 .privilege-item-title {
@@ -104,29 +120,40 @@ body {
   line-height: 28px;
   text-align: center;
   text-transform: uppercase;
-  color: #000000;
+  color: var(--color-black);
 }
 .privilege-item-text {
   font-size: 18px;
   font-weight: 400;
   line-height: 21px;
   text-align: center;
-  color: #333333;
+  color: var(--color-dark);
 }
 
-.privilege-list li:first-child,
-.privilege-list li:nth-child(2) {
-  background-color: #83B3D3;
+.privilege-item-picture {
+  background-color: var(--color-light-blue);
 }
 
-.privilege-list li:first-child .privilege-item-title,
-.privilege-list li:first-child .privilege-item-text,
-.privilege-list li:nth-child(2) .privilege-item-title,
-.privilege-list li:nth-child(2) .privilege-item-text {
-  color:#ffffff;
+.privilege-item-picture .privilege-item-title,
+.privilege-item-picture .privilege-item-text,
+.privilege-item-picture .privilege-item-title,
+.privilege-item-picture .privilege-item-text {
+  color: var(--color-white);
+}
+
+.background-light {
+  background-color: var(--color-cold-light);
 }
 
 /* Privilege-aside-list  */
+
+.privilege-aside-list {
+  background-color: var(--color-white);
+}
+
+.privilege-aside-list .background-light {
+  background-color: var(--color-cold-light);
+}
 
 .privilege-aside-title {
   font-size: 24px;
@@ -134,7 +161,7 @@ body {
   line-height: 28px;
   text-align: center;
   text-transform: uppercase;
-  color: #000000;
+  color: var(--color-black);
 }
 
 .privilege-aside-text {
@@ -142,13 +169,13 @@ body {
   font-weight: 400;
   line-height: 21px;
   text-align: center;
-  color: #333333;
+  color: var(--color-dark);
 }
 
 /* Поиск гостиниц */
 
 .search-hostel {
-  background-color: #ffffff;
+  background-color: var(--color-white);
 }
 
 .search-hostel-title {
@@ -157,7 +184,7 @@ body {
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
-  color: #000000;
+  color: var(--color-black);
 }
 
 .search-hostel-text {
@@ -165,7 +192,7 @@ body {
   font-weight: 400;
   line-height: 26px;
   text-align: center;
-  color: #333333;
+  color: var(--color-dark);
 }
 
 .search-hostel-btn {
@@ -175,14 +202,14 @@ body {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  color: #ffffff;
-  background-color: #756257;
+  color: var(--color-white);
+  background-color: var(--color-light-brown);
 }
 
 /* Подписка */
 
 .mailling {
-  background-color: #ffffff;
+  background-color: var(--color-light-brown);
   background-image: url("../images/mailling-background.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -194,7 +221,7 @@ body {
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .mailling-text {
@@ -202,7 +229,7 @@ body {
   font-weight: 400;
   line-height: 26px;
   text-align: center;
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .subscribe-button {
@@ -211,14 +238,14 @@ body {
   line-height: 26px;
   text-align: center;
   text-transform: uppercase;
-  color: #ffffff;
-  background-color: #83B3D3;
+  color: var(--color-white);
+  background-color: var(--color-light-blue);
 }
 
 /* Подвал */
 
 .footer {
-  background-color: #ffffff;
+  background-color: var(--color-white);
 }
 
 .phone {
@@ -228,15 +255,15 @@ body {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  color: #000000;
+  color: var(--color-black);
 }
 
 /* Каталог */
 
 /* Фильтр */
 
-.filter {
-  background-color: #333333;
+.filter-wrapper {
+  background-color: var(--color-dark);
   background-image: url("../images/catalog-main-background.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -246,7 +273,7 @@ body {
   font-size: 60px;
   font-weight: 700;
   line-height: 78px;
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 /* Хлебные крошки */
@@ -255,7 +282,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 21px;
-  color: #ffffff;
+  color: var(--color-white);
   text-decoration: none;
 }
 
@@ -265,14 +292,14 @@ body {
   font-size: 20px;
   font-weight: 700;
   line-height: 26px;
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .checkpoint {
   font-size: 18px;
   font-weight: 400;
   line-height: 23px;
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .catalog-filter .button {
@@ -281,8 +308,8 @@ body {
   line-height: 21px;
   text-transform: uppercase;
   text-align: center;
-  color: #ffffff;
-  background-color: #83B3D3;
+  color: var(--color-white);
+  background-color: var(--color-light-blue);
 }
 
 .catalog-filter .reset {
@@ -290,14 +317,14 @@ body {
   font-weight: 400;
   line-height: 23px;
   text-align: center;
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 /* Сортировка */
 
 .sorting {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: var(--color-white);
+  color: var(--color-black);
 }
 
 .sorting-search {
@@ -305,21 +332,21 @@ body {
   font-weight: 700;
   line-height: 39px;
   text-transform: uppercase;
-  color: #000000;
+  color: var(--color-black);
 }
 
 .select-sorting {
   font-size: 18px;
   font-weight: 400;
   line-height: 23px;
-  color: #333333;
+  color: var(--color-dark);
 }
 
 /* Отфильтрованный каталог */
 
 .catalog-card {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: var(--color-white);
+  color: var(--color-black);
 }
 
 .catalog-link {
@@ -330,7 +357,7 @@ body {
   font-size: 24px;
   font-weight: 700;
   line-height: 31px;
-  color: #000000;
+  color: var(--color-black);
 }
 
 .catalog-card-type,
@@ -338,7 +365,7 @@ body {
   font-size: 18px;
   font-weight: 400;
   line-height: 23px;
-  color: #333333;
+  color: var(--color-dark);
 }
 
 .catalog-card-btn {
@@ -348,8 +375,8 @@ body {
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
-  color: #ffffff;
-  background-color: #756257;
+  color: var(--color-white);
+  background-color: var(--color-light-brown);
 }
 
 .btn-favourites {
@@ -359,12 +386,12 @@ body {
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
-  color: #ffffff;
-  background-color: #83B3D3;
+  color: var(--color-white);
+  background-color: var(--color-light-blue);
 }
 
 .btn-favourites-added {
-  background-color: #7DB54F;
+  background-color: var(--color-light-green);
 }
 
 .raiting-value {
@@ -373,8 +400,8 @@ body {
   line-height: 21px;
   text-align: center;
   text-transform: uppercase;
-  color: #333333;
-  background-color: #f2f2f2;
+  color: var(--color-dark);
+  background-color: var(--color-light);
 }
 
 /* Пагинация */
@@ -385,12 +412,12 @@ body {
   line-height: 26px;
   text-align: center;
   text-transform: uppercase;
-  color: #ffffff;
-  background-color: #83B3D3;
+  color: var(--color-white);
+  background-color: var(--color-light-blue);
 }
 
 .pagination {
-  background-color: #ffffff;
+  background-color: var(--color-white);
 }
 
 .pagination-link {
@@ -400,27 +427,27 @@ body {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  color: #ffffff;
-  background-color: #83B3D3;
+  color: var(--color-white);
+  background-color: var(--color-light-blue);
 }
 
 .pagination-current {
-  color: #000000;
-  background-color: #f2f2f2;
+  color: var(--color-white);
+  background-color: var(--color-light);
 }
 
 .count-filter {
   font-size: 18px;
   font-weight: 400;
   line-height: 23px;
-  color: #333333;
+  color: var(--color-dark);
 }
 
 /* Подписка на странице каталога */
 
 .catalog-mailling {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: var(--color-white);
+  color: var(--color-black);
 }
 
 .catalog-mailling-title {
@@ -429,7 +456,7 @@ body {
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
-  color: #000000;
+  color: var(--color-black);
 }
 
 .catalog-mailling-text {
@@ -437,7 +464,7 @@ body {
   font-weight: 400;
   line-height: 26px;
   text-align: center;
-  color: #333333;
+  color: var(--color-dark);
 }
 
 .subscribe-button {
@@ -446,6 +473,6 @@ body {
   line-height: 26px;
   text-align: center;
   text-transform: uppercase;
-  color: #ffffff;
-  background-color: #83B3D3;
+  color: var(--color-white);
+  background-color: var(--color-light-blue);
 }
