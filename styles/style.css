@@ -1,0 +1,482 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+:root {
+  --color-black: #000000;
+  --color-dark: #333333;
+  --color-gray: #e5e5e5;
+  --color-light: #f2f2f2;
+  --color-white: #ffffff;
+  --color-light-brown: #756257;
+  --color-dark-brown: #615048;
+  --color-light-green: #7db54f;
+  --color-dark-green: #6c9e42;
+  --color-light-blue: #83b3d3;
+  --color-dark-blue: #68a2ca;
+  --color-cold-light: rgba(131, 179, 211, 0.12);
+  --color-warm-light: rgba(131, 179, 211, 0.2);
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: var(--color-dark);
+  background-color: var(--color-light);
+}
+
+/* Шапка */
+.main-header {
+  color: var(--color-black);
+  background-color: var(--color-white);
+}
+
+.main-nav-link {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  color: var(--color-black);
+  text-align: center;
+  background-color: var(--color-white);
+  text-decoration: none;
+}
+
+.counter-value {
+  font-size: 10px;
+  line-height: 13px;
+  text-align: center;
+  letter-spacing: -0.1em;
+  color: var(--color-white);
+  background-color: var(--color-light-green);
+  border-radius: 10px;
+}
+
+.user-nav-link-btn {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-white);
+  background-color: var(--color-light-brown);
+}
+
+/* Промо */
+.promo {
+  background-color: var(--color-white);
+}
+
+.promo-title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-black);
+}
+
+.promo-text {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: center;
+  color: var(--color-dark);
+}
+
+/* Преимущества */
+
+.privilege {
+  background-color: var(--color-white);
+}
+
+.privilege-item-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-black);
+}
+.privilege-item-text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: center;
+  color: var(--color-dark);
+}
+
+.privilege-list li:nth-child(4) {
+  background-color: var(--color-warm-light);
+}
+
+.privilege-item-picture {
+  background-color: var(--color-light-blue);
+}
+
+.privilege-item-picture .privilege-item-title,
+.privilege-item-picture .privilege-item-text,
+.privilege-item-picture .privilege-item-title,
+.privilege-item-picture .privilege-item-text {
+  color: var(--color-white);
+}
+
+.background-light {
+  background-color: var(--color-cold-light);
+}
+
+/* Privilege-aside-list  */
+
+.privilege-aside-list {
+  background-color: var(--color-white);
+}
+
+.privilege-aside-list .background-light {
+  background-color: var(--color-cold-light);
+}
+
+.privilege-aside-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-black);
+}
+
+.privilege-aside-text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: center;
+  color: var(--color-dark);
+}
+
+/* Поиск гостиниц */
+
+.search-hostel {
+  background-color: var(--color-white);
+}
+
+.search-hostel-title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-black);
+}
+
+.search-hostel-text {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+  color: var(--color-dark);
+}
+
+.search-hostel-btn {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-white);
+  background-color: var(--color-light-brown);
+}
+
+/* Подписка */
+
+.mailling {
+  background-color: var(--color-light-brown);
+  background-image: url("../images/mailling-background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.mailling-title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-white);
+}
+
+.mailling-text {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.subscribe-button {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-white);
+  background-color: var(--color-light-blue);
+}
+
+/* Подвал */
+
+.footer {
+  background-color: var(--color-white);
+}
+
+.phone {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-black);
+}
+
+/* Каталог */
+
+/* Фильтр */
+
+.filter-wrapper {
+  background-color: var(--color-dark);
+  background-image: url("../images/catalog-main-background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.inner-header-title {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 78px;
+  color: var(--color-white);
+}
+
+/* Хлебные крошки */
+
+.breadcrumbs-link {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+/* Форма фильтра */
+
+.catalog-filter-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  color: var(--color-white);
+}
+
+.checkpoint {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
+  color: var(--color-white);
+}
+
+.catalog-filter .button {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-white);
+  background-color: var(--color-light-blue);
+}
+
+.catalog-filter .reset {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
+  text-align: center;
+  color: var(--color-white);
+}
+
+/* Сортировка */
+
+.sorting {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+.sorting-search {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 39px;
+  text-transform: uppercase;
+  color: var(--color-black);
+}
+
+.select-sorting {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
+  color: var(--color-dark);
+}
+
+/* Отфильтрованный каталог */
+
+.catalog-card {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+.catalog-link {
+  text-decoration: none;
+}
+
+.catalog-card-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 31px;
+  color: var(--color-black);
+}
+
+.catalog-card-type,
+.catalog-card-price {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
+  color: var(--color-dark);
+}
+
+.catalog-card-btn {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-white);
+  background-color: var(--color-light-brown);
+}
+
+.btn-favourites {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-white);
+  background-color: var(--color-light-blue);
+}
+
+.btn-favourites-added {
+  background-color: var(--color-light-green);
+}
+
+.raiting-value {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-dark);
+  background-color: var(--color-light);
+}
+
+/* Пагинация */
+
+.pagination-show-more {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-white);
+  background-color: var(--color-light-blue);
+}
+
+.pagination {
+  background-color: var(--color-white);
+}
+
+.pagination-link {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-white);
+  background-color: var(--color-light-blue);
+}
+
+.pagination-current {
+  color: var(--color-white);
+  background-color: var(--color-light);
+}
+
+.count-filter {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
+  color: var(--color-dark);
+}
+
+/* Подписка на странице каталога */
+
+.catalog-mailling {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+.catalog-mailling-title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-black);
+}
+
+.catalog-mailling-text {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+  color: var(--color-dark);
+}
+
+.subscribe-button {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-white);
+  background-color: var(--color-light-blue);
+}
