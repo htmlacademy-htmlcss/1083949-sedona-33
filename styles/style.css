@@ -130,7 +130,6 @@ body {
   color: var(--color-dark, #333333);
 }
 
-.privilege-item-picture,
 .privilege-item-picture {
   background-color: var(--color-light-blue, #83b3d3);
 }
