@@ -30,7 +30,11 @@
   --color-warm-light: rgba(131, 179, 211, 0.2);
 }
 
-.visually-hidden {
+html {
+  height: 100%;
+}
+
+ .visually-hidden {
   position: absolute;
   clip: rect(1px, 1px, 1px, 1px);
   padding: 0;
@@ -41,6 +45,10 @@
 }
 
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -56,6 +64,24 @@ body {
   background-color: var(--color-white);
 }
 
+.main-nav-logo {
+  display: block;
+  width: 140px;
+  margin-right: 30px;
+}
+
+.main-nav {
+  display: flex;
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.main-nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .main-nav-link {
   font-size: 20px;
   line-height: 26px;
@@ -64,6 +90,15 @@ body {
   text-align: center;
   background-color: var(--color-white);
   text-decoration: none;
+}
+
+.site-navigation-list {
+  width: 550px;
+}
+
+.user-nav-list {
+  max-width: 310px;
+  margin-left: auto;
 }
 
 .counter-value {
@@ -86,9 +121,24 @@ body {
   background-color: var(--color-light-brown);
 }
 
+.main-container {
+  flex-grow: 1;
+}
+
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 /* Промо */
 .promo {
   background-color: var(--color-white);
+}
+
+.promo-img-inscription {
+  position: absolute;
+  top: 116px;
+  left: 411px;
 }
 
 .promo-title {
@@ -108,11 +158,24 @@ body {
   color: var(--color-dark);
 }
 
-/* Преимущества */
+/* Преимущества  */
 
 .privilege {
   background-color: var(--color-white);
 }
+
+.privilege-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/*.privilege-list li:nth-child(2) {
+  flex-direction: row-reverse;
+}*/
 
 .privilege-item-title {
   font-size: 24px;
@@ -130,11 +193,24 @@ body {
   color: var(--color-dark);
 }
 
+.privilege-item-img {
+  display: block;
+}
+
+.privilege-list li:nth-child(3),
+.privilege-list li:nth-child(5) {
+  width: calc(100% / 3);
+  background-color: var(--color-cold-light);
+}
+
 .privilege-list li:nth-child(4) {
+  width: calc(100% / 3);
+  min-height: 384px;
   background-color: var(--color-warm-light);
 }
 
 .privilege-item-picture {
+  width: 100%;
   background-color: var(--color-light-blue);
 }
 
@@ -145,18 +221,23 @@ body {
   color: var(--color-white);
 }
 
-.background-light {
-  background-color: var(--color-cold-light);
-}
-
 /* Privilege-aside-list  */
 
 .privilege-aside-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
   background-color: var(--color-white);
 }
 
 .privilege-aside-list .background-light {
   background-color: var(--color-cold-light);
+}
+
+.privilege-aside-item {
+  width: calc(100% / 3);
+  min-height: 384px;
 }
 
 .privilege-aside-title {
@@ -252,7 +333,20 @@ body {
   background-color: var(--color-white);
 }
 
+.page-footer-container {
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.socials-list {
+  margin-right: auto;
+  max-width: 240px;
+}
+
 .phone {
+  width: 720px;
   font-size: 40px;
   font-weight: 400;
   line-height: 40px;
@@ -262,15 +356,46 @@ body {
   color: var(--color-black);
 }
 
+.footer-logo {
+  margin-left: auto;
+  max-width: 240px;
+}
+
 /* Каталог */
 
 /* Фильтр */
 
 .filter-wrapper {
+  margin: 0 auto;
   background-color: var(--color-dark);
   background-image: url("../images/catalog-main-background.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
+}
+
+.breadcrumbs {
+  display: flex;
+  margin: 0;
+  flex-direction: row;
+  list-style: none;
+}
+
+.catalog-filter-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.catalog-filter:nth-child(2) {
+  width: 313px;
+}
+
+.catalog-filter-group {
+  width: 287px;
+}
+
+.catalog-filter-btn {
+  display: flex;
+  flex-direction: column;
 }
 
 .inner-header-title {
@@ -327,11 +452,17 @@ body {
 /* Сортировка */
 
 .sorting {
+  display: flex;
+  margin: 0 auto;
+  min-width: 1057px;
+  padding-left: 71px;
+  padding-right: 72px;
   background-color: var(--color-white);
   color: var(--color-black);
 }
 
 .sorting-search {
+  width: calc(100% / 2);
   font-size: 30px;
   font-weight: 700;
   line-height: 39px;
@@ -348,7 +479,17 @@ body {
 
 /* Отфильтрованный каталог */
 
+.catalog-list {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1058px;
+  list-style: none;
+}
+
 .catalog-card {
+  width: 339px;
   background-color: var(--color-white);
   color: var(--color-black);
 }
@@ -421,7 +562,16 @@ body {
 }
 
 .pagination {
-  background-color: var(--color-white);
+  display: flex;
+  margin: 0 auto;
+  width: 1056px;
+}
+
+.pagination-list {
+  width: calc(100% / 2);
+  display: flex;
+  flex-direction: row;
+  list-style: none;
 }
 
 .pagination-link {
@@ -441,6 +591,7 @@ body {
 }
 
 .count-filter {
+  margin-left: auto;
   font-size: 18px;
   font-weight: 400;
   line-height: 23px;
