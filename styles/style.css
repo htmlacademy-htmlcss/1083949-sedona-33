@@ -34,7 +34,7 @@ html {
   height: 100%;
 }
 
- .visually-hidden {
+.visually-hidden {
   position: absolute;
   clip: rect(1px, 1px, 1px, 1px);
   padding: 0;
@@ -62,6 +62,7 @@ body {
 .main-header {
   color: var(--color-black);
   background-color: var(--color-white);
+  margin: 0 auto;
 }
 
 .main-nav-logo {
@@ -72,8 +73,9 @@ body {
 
 .main-nav {
   display: flex;
-  width: 1060px;
   margin: 0 auto;
+  padding-left: 70px;
+  padding-right: 70px;
 }
 
 .main-nav-list {
@@ -135,6 +137,11 @@ body {
   background-color: var(--color-white);
 }
 
+.promo-img-container {
+  height: 485px;
+  background-color: var(--color-light-brown);
+}
+
 .promo-img-inscription {
   position: absolute;
   top: 116px;
@@ -172,10 +179,6 @@ body {
   padding: 0;
   list-style: none;
 }
-
-/*.privilege-list li:nth-child(2) {
-  flex-direction: row-reverse;
-}*/
 
 .privilege-item-title {
   font-size: 24px;
@@ -260,6 +263,8 @@ body {
 /* Поиск гостиниц */
 
 .search-hostel {
+  padding-left: 200px;
+  padding-right: 200px;
   background-color: var(--color-white);
 }
 
@@ -294,6 +299,8 @@ body {
 /* Подписка */
 
 .mailling {
+  padding-left: 200px;
+  padding-right: 200px;
   background-color: var(--color-light-brown);
   background-image: url("../images/mailling-background.jpg");
   background-repeat: no-repeat;
@@ -336,8 +343,9 @@ body {
 .page-footer-container {
   display: flex;
   justify-content: space-between;
-  width: 1200px;
   margin: 0 auto;
+  padding-left: 72px;
+  padding-right: 72px;
 }
 
 .socials-list {
@@ -364,6 +372,11 @@ body {
 /* Каталог */
 
 /* Фильтр */
+
+.filter {
+  margin-left: 72px;
+  margin-right: 72px;
+}
 
 .filter-wrapper {
   margin: 0 auto;
@@ -399,6 +412,8 @@ body {
 }
 
 .inner-header-title {
+  margin-left: 72px;
+  margin-right: 72px;
   font-size: 60px;
   font-weight: 700;
   line-height: 78px;
@@ -479,12 +494,17 @@ body {
 
 /* Отфильтрованный каталог */
 
+.catalog {
+  background-color: var(--color-white);
+}
+
 .catalog-list {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
-  max-width: 1058px;
+  padding-left: 72px;
+  padding-right: 72px;
   list-style: none;
 }
 
@@ -552,6 +572,8 @@ body {
 /* Пагинация */
 
 .pagination-show-more {
+  margin-left: 72px;
+  margin-right: 72px;
   font-size: 20px;
   font-weight: 700;
   line-height: 26px;
@@ -564,7 +586,9 @@ body {
 .pagination {
   display: flex;
   margin: 0 auto;
-  width: 1056px;
+  padding-left: 72px;
+  padding-right: 72px;
+  background-color: var(--color-white);
 }
 
 .pagination-list {
@@ -603,6 +627,8 @@ body {
 .catalog-mailling {
   background-color: var(--color-white);
   color: var(--color-black);
+  padding-left: 200px;
+  padding-right: 200px;
 }
 
 .catalog-mailling-title {
