@@ -188,6 +188,7 @@ body {
   text-transform: uppercase;
   color: var(--color-black);
 }
+
 .privilege-item-text {
   font-size: 18px;
   font-weight: 400;
@@ -196,8 +197,18 @@ body {
   color: var(--color-dark);
 }
 
+.privilege-item-wrapper {
+  max-width: 400px;
+}
+
 .privilege-item-img {
   display: block;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.privilege-list li:nth-child(2) {
+  flex-direction: row-reverse;
 }
 
 .privilege-list li:nth-child(3),
@@ -213,6 +224,9 @@ body {
 }
 
 .privilege-item-picture {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   width: 100%;
   background-color: var(--color-light-blue);
 }
