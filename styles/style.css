@@ -249,6 +249,7 @@ body {
 .privilege-item-title {
   margin-top: 98px;
   margin-bottom: 80px;
+  padding: 0 130px;
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
@@ -259,6 +260,7 @@ body {
 .privilege-item-picture .privilege-item-title {
   margin-top: 97px;
   margin-bottom: 81px;
+  padding: 0 90px;
 }
 
 .privilege-item-picture .privilege-item-text {
