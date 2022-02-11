@@ -21,25 +21,25 @@
               <a class="main-nav-link site-navigation-link" href="#">О Седоне</a>
             </li>
             <li class="main-nav-item site-navigation-item">
-              <a class="main-nav-link main-nav-link-current site-navigation-link" href="catalog.html">Гостиницы</a>
+              <a class="main-nav-link site-navigation-link" href="catalog.html">Гостиницы</a>
             </li>
           </ul>
           <ul class="main-nav-list user-nav-list">
             <li class="main-nav-item user-nav-item">
-              <a class="main-nav-link user-nav-link" href="#">
-                <span class="visually-hidden">
-                  Избранное.
-                  <sup class="counter-value">12</sup>
-                </span>
-              </a>
-            </li>
-            <li class="main-nav-item site-navigation-item">
-              <a class="main-nav-link user-nav-link" href="#">
+              <a class="main-nav-link user-nav-link user-nav-link-search" href="#">
                 <span class="visually-hidden">Поиск.</span>
               </a>
             </li>
             <li class="main-nav-item user-nav-item">
-              <a class="btn main-nav-link user-nav-link" href="#">Хочу сюда!</a>
+              <a class="main-nav-link user-nav-link user-nav-link-favorite" href="#">
+                <span class="visually-hidden">
+                  Избранное.
+                </span>
+                <sup class="counter-value">12</sup>
+              </a>
+            </li>
+            <li class="main-nav-item user-nav-item">
+              <a class="user-nav-link-btn main-nav-link" href="#">Хочу сюда!</a>
             </li>
           </ul>
         </nav>
@@ -54,12 +54,12 @@
             <!--Хлебные крошки-->
             <ul class="breadcrumbs">
               <li class="breadcrumbs-item">
-                <a class="breadcrumbs-link" href="index.html">
-                  <span class="visually-hidden">Главная.</span>
+                <a class="breadcrumbs-link breadcrumbs-link-main" href="catalog.html">
+                  <span class="visually-hidden">Каталог.</span>
                 </a>
               </li>
               <li class="breadcrumbs-item">
-                <a class="breadcrumbs-link">Каталог</a>
+                <a class="breadcrumbs-link">Гостиницы</a>
               </li>
             </ul>
             <!--Фильтр-->
@@ -117,9 +117,9 @@
                 <fieldset class="catalog-filter-group">
                   <legend class="catalog-filter-title">Стоимость, ₽:</legend>
                   <label class="visually-hidden" for="min-price">от.</label>
-                  <input class="min-price" type="text" id="min-price" name="min-price" value="0" placeholder="от">
+                  <input class="min-price price" type="text" id="min-price" name="min-price" value="0" placeholder="от">
                   <label class="visually-hidden" for="max-price">до.</label>
-                  <input class="max-price" type="text" id="max-price" name="max-price" value="9000" placeholder="до">
+                  <input class="max-price price" type="text" id="max-price" name="max-price" value="9000" placeholder="до">
                   <label class="checkpoint" for="range"></label>
                   <input class="range" type="range" id="range" name="range" min="0" max="15000" step="100" value="9000">
                 </fieldset>
@@ -161,8 +161,10 @@
                 <p class="catalog-card-type">Гостиница</p>
                 <p class="catalog-card-price">От 4000 ₽</p>
               </a>
-              <a class="catalog-card-btn" href="#">подробнее</a>
-              <a class="btn-favourites" href="#">В избранное</a>
+              <div class="catalog-btn">
+                <a class="catalog-card-btn" href="#">подробнее</a>
+                <a class="btn-favourites" href="#">В избранное</a>
+              </div>
               <div class="raiting">
                 <span class="visually-hidden">4 звезды.</span>
                 <span class="raiting-value">Рейтинг: 8,5</span>
@@ -175,11 +177,13 @@
                 <p class="catalog-card-type">Гостиница</p>
                 <p class="catalog-card-price">От 3000 ₽</p>
               </a>
-              <a class="catalog-card-btn" href="#">подробнее</a>
-              <a class="btn-favourites" href="#">В избранное</a>
+              <div class="catalog-btn">
+                <a class="catalog-card-btn" href="#">подробнее</a>
+                <a class="btn-favourites" href="#">В избранное</a>
+              </div>
               <div class="raiting">
                 <span class="visually-hidden">3 звезды.</span>
-              <span class="raiting-value">Рейтинг: 8,9</span>
+                <span class="raiting-value">Рейтинг: 8,9</span>
               </div>
             </li>
             <li class="catalog-card">
@@ -189,8 +193,10 @@
                 <p class="catalog-card-type">Гостиница</p>
                 <p class="catalog-card-price">От 2000 ₽</p>
               </a>
-              <a class="catalog-card-btn" href="#">подробнее</a>
-              <a class="btn-favourites btn-favourites-added" href="#">В избранном</a>
+              <div class="catalog-btn">
+                <a class="catalog-card-btn" href="#">подробнее</a>
+                <a class="btn-favourites btn-favourites-added" href="#">В избранном</a>
+              </div>
               <div class="raiting">
                 <span class="visually-hidden">2 звезды.</span>
                 <span class="raiting-value">Рейтинг: 9,2</span>
@@ -203,15 +209,19 @@
                 <p class="catalog-card-type">Гостиница</p>
                 <p class="catalog-card-price">От 3000 ₽</p>
               </a>
-              <a class="catalog-card-btn" href="#">подробнее</a>
-              <a class="btn-favourites" href="#">В избранное</a>
+              <div class="catalog-btn">
+                <a class="catalog-card-btn" href="#">подробнее</a>
+                <a class="btn-favourites" href="#">В избранное</a>
+              </div>
               <div class="raiting">
                 <span class="visually-hidden">2 звезды.</span>
                 <span class="raiting-value">Рейтинг: 9,2</span>
               </div>
             </li>
           </ul>
-          <button class="button pagination-show-more" type="button">Загрузить ещё</button>
+          <div class="pagination-show-more">
+            <button class="button pagination-btn" type="button">Загрузить ещё</button>
+           </div>
         </section>
         <div class="pagination">
           <ul class="pagination-list">

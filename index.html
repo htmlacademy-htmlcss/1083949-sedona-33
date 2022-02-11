@@ -26,20 +26,20 @@
           </ul>
           <ul class="main-nav-list user-nav-list">
             <li class="main-nav-item user-nav-item">
-              <a class="main-nav-link user-nav-link" href="#">
-                <span class="visually-hidden">
-                  Избранное.
-                  <sup class="counter-value">12</sup>
-                </span>
-              </a>
-            </li>
-            <li class="main-nav-item site-navigation-item">
-              <a class="main-nav-link user-nav-link" href="#">
+              <a class="main-nav-link user-nav-link user-nav-link-search" href="#">
                 <span class="visually-hidden">Поиск.</span>
               </a>
             </li>
             <li class="main-nav-item user-nav-item">
-              <a class="user-nav-link-btn main-nav-link user-nav-link" href="#">Хочу сюда!</a>
+              <a class="main-nav-link user-nav-link user-nav-link-favorite" href="#">
+                <span class="visually-hidden">
+                  Избранное.
+                </span>
+                <sup class="counter-value">12</sup>
+              </a>
+            </li>
+            <li class="main-nav-item user-nav-item">
+              <a class="user-nav-link-btn main-nav-link" href="#">Хочу сюда!</a>
             </li>
           </ul>
         </nav>
@@ -131,15 +131,17 @@
         </section>
         <!--Рассылка-->
         <section class="mailling">
-          <h2 class="mailling-title">Подпишитесь на рассылку</h2>
-          <p class="mailling-text">
-            Только полезная информация и никакого спама, честное бойскаутское!
-          </p>
-          <form class="mailling-subscribe" action="https://echo.htmlacademy.ru" method="post">
-            <label class="visually-hidden" for="subscribe-email">Ваш e-mail.</label>
-            <input class="subscribe-field" type="email" id="subscribe-email" name="subscribe-email" placeholder="Ваш e-mail">
-            <button class="subscribe-button" type="submit">Подписаться</button>
-          </form>
+          <div class="mailling-container">
+            <h2 class="mailling-title">Подпишитесь на рассылку</h2>
+            <p class="mailling-text">
+              Только полезная информация и никакого спама, честное бойскаутское!
+            </p>
+            <form class="mailling-subscribe" action="https://echo.htmlacademy.ru" method="post">
+              <label class="visually-hidden" for="subscribe-email">Ваш e-mail.</label>
+              <input class="subscribe-field" type="email" id="subscribe-email" name="subscribe-email" placeholder="Ваш e-mail">
+              <button class="subscribe-button" type="submit">Подписаться</button>
+            </form>
+          </div>
         </section>
       </main>
       <!--Подвал-->
