@@ -35,9 +35,9 @@ html {
   height: 100%;
 }
 
- .visually-hidden {
+.visually-hidden {
   position: absolute;
-  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
   margin: -1px;
   padding: 0;
   border: 0;
@@ -68,11 +68,10 @@ body {
 }
 
 .main-nav-logo {
-  order: -1;
+  position: absolute;
   display: block;
   width: 140px;
   margin: 0;
-  margin-right: 30px;
 }
 
 .main-nav {
@@ -108,6 +107,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
   margin: 0;
+  margin-left: 169px;
   width: 550px;
 }
 
@@ -124,6 +124,8 @@ body {
 .user-nav-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   max-width: 310px;
   padding: 0;
   margin: 0;
@@ -136,32 +138,20 @@ body {
 
 .user-nav-link {
   display: flex;
-  padding: 23px 11px;
-}
-
-.user-nav-link:last-child {
-  padding-right: 0;
-}
-
-.user-nav-link::before {
-  content: "";
-  width: 20px;
-  height: 19px;
-}
-
-.user-nav-link-favorite::before {
-  background-image: url("../images/icons/favorite.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.user-nav-link-search::before {
-  background-image: url("../images/icons/search.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
+  padding-top: 23px;
+  padding-bottom: 23px;
+  padding-left: 11px;
+  padding-right: 11px;
+  min-width: 20px;
+  min-height: 19px;
 }
 
 .counter-value {
+  position: absolute;
+  top: 15px;
+  left: 999px;
+  width: 20px;
+  height: 20px;
   font-size: 10px;
   line-height: 13px;
   text-align: center;
@@ -174,8 +164,8 @@ body {
 .user-nav-link-btn {
   display: block;
   border-radius: 4px;
-  padding: 9px 35px 8px 35px;
-  margin: 13px 0px 19px 20px;
+  padding: 9px 35px 8px 34px;
+  margin: 13px 0px 14px 20px;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
@@ -200,15 +190,24 @@ body {
 }
 
 .promo-img-container {
-  margin-top: -5px;   /*Обрезался логотип, а должен быть сверху картинки */
+  position: relative;
   height: 485px;
   background-color: var(--color-light-brown);
 }
 
+/* .promo-img-background::after {
+  background-image: url("../images/divider-main-background.svg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: bottom;
+
+} */
+
 .promo-img-inscription {
   position: absolute;
-  top: 116px;
-  left: 411px;
+  top: 51px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .promo-title {
@@ -224,6 +223,8 @@ body {
 .promo-text {
   margin: 0;
   padding-bottom: 80px;
+  padding-left: 240px;
+  padding-right: 240px;
   font-size: 22px;
   font-weight: 400;
   line-height: 36px;
@@ -258,19 +259,21 @@ body {
   color: var(--color-black);
 }
 .privilege-item-picture .privilege-item-title {
-  margin-top: 97px;
-  margin-bottom: 81px;
+  margin-top: 98px;
+  margin-bottom: 80px;
   padding: 0 90px;
 }
 
 .privilege-item-picture .privilege-item-text {
   padding: 0 90px;
+  min-width: 220px;
 }
 
 .privilege-item-text {
   padding: 0 75px;
   margin-top: 0;
   margin-bottom: 0;
+  min-width: 250px;
   font-size: 18px;
   font-weight: 400;
   line-height: 21px;
@@ -336,10 +339,11 @@ body {
 .privilege-aside-item {
   width: calc(100% / 3);
   min-height: 384px;
+
 }
 
 .privilege-aside-title {
-  margin: 184px 75px 20px 75px;
+  margin: 184px 75px 19px 75px;
   display: block;
   font-size: 24px;
   font-weight: 700;
@@ -352,6 +356,8 @@ body {
 .privilege-aside-text {
   padding: 0 75px;
   margin: 0;
+  margin-bottom: 79px;
+  min-width: 250px;
   font-size: 18px;
   font-weight: 400;
   line-height: 21px;
@@ -377,9 +383,8 @@ body {
   color: var(--color-black);
 }
 
-.search-hostel-text {  /* Здесь не знаю как первую строку сделать меньше второй, предположение только в разметке <br> вставить*/
-  padding-left: 60px;
-  padding-right: 60px;
+.search-hostel-text {  /* вторая строка не попадает */
+  min-width: 720px;
   margin: 0 240px 56px 240px;
   font-size: 22px;
   font-weight: 400;
@@ -389,10 +394,11 @@ body {
 }
 
 .search-hostel-btn {
+  box-sizing: border-box;
   display: block;
   max-height: 60px;
   margin: 0 312px;
-  padding: 15px 150px 15px 150px;
+  padding: 15px 150px;
   border-radius: 10px;
   font-size: 20px;
   font-weight: 700;
@@ -437,7 +443,9 @@ body {
 }
 
 .mailling-subscribe {
-  margin: 0 200px 0 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .subscribe-field {
@@ -449,15 +457,27 @@ body {
   background-color: var(--color-white);
 }
 
-.subscribe-button {
+.subscribe-field::placeholder {
+  padding-left: 22px;
+  padding-right: 19px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  color: var(--color-black);
+  opacity: 0.6;
+}
+
+.subscribe-button {   /* текст в кнопке растягивается*/
+  box-sizing: border-box;
   width: 200px;
   height: 60px;
-  padding: 0;
+  padding: 0 32px;
   border-radius: 0 10px 10px 0;
   border: none;
   font-size: 20px;
   font-weight: 700;
-  line-height: 26px;
+  line-height: 20px;
+  letter-spacing: -0.1em;
   text-align: center;
   text-transform: uppercase;
   color: var(--color-white);
@@ -474,22 +494,26 @@ body {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 40px 72px 30px 72px;
+  padding: 30px 72px 30px 72px;
+  border-top: 1px solid var(--color-light-grey);
 }
 
 .socials-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   margin: 0;
   padding: 0;
   margin-right: auto;
   max-width: 240px;
+  min-width: 107px;
   list-style-type: none;
 }
 
-.phone {
-  padding: 5px;
+.phone {     /* у номера курсивный шрифт*/
+  display: block;
+  padding-top: 8px;
   width: 720px;
   font-size: 40px;
   font-weight: 400;
@@ -511,36 +535,9 @@ body {
   padding-bottom: 3px;
 }
 
-.socials-link::before {
-  content: "";
-  width: 20px;
-  height: 20px;
-}
-
 .socials-link {
   display: flex;
-  padding-right: 20px;
-}
-
-.socials-link-twitter::before {
-  background-image: url("/images/icons/social-twitter.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.socials-link-facebook::before {
-  background-image: url("../images/icons/social-facebook.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.socials-link-youtube::before {
-  background-image: url("../images/icons/social-youtube.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+  /* padding-right: 20px; */
 }
 
 /* Каталог */
@@ -553,8 +550,8 @@ body {
 }
 
 .filter-wrapper {   /* Почему под главной навигацией у фона появилась выемка*/
+  position: relative;
   margin: 0 auto;
-  margin-top: -5px;
   background-color: var(--color-dark);
   background-image: url("../images/catalog-main-background.jpg");
   background-repeat: no-repeat;
@@ -580,10 +577,10 @@ body {
   flex-direction: column;
 }
 
-.inner-header-title {  /*Почему-то у меня заголовок на 10px выше, из-за этого коричневый фон торчит.*/
+.inner-header-title {  /*Почему-то у меня область заголовка на 10px выше, из-за этого коричневый фон торчит.*/
   padding: 0;
-  padding-top: 35px;
-  margin-top: 0;
+  padding-top: 25px; /*должен быть 35px*/
+  margin: 0;
   margin-bottom: 5px;
   margin-left: 72px;
   margin-right: 72px;
@@ -698,9 +695,11 @@ body {
 }
 
 .select-sorting {
+  box-sizing: border-box;
   margin: 0;
   margin-right: 81px;
   padding: 0;
+  padding: 0 19px;
   width: 287px;
   border: 2px solid var(--color-light-grey);
   border-radius: 4px;
@@ -711,6 +710,7 @@ body {
 }
 
 .sorting .button {
+  box-sizing: border-box;
   width: 48px;
   height: 48px;
   margin-right: 8px;
@@ -736,7 +736,7 @@ body {
 
 .catalog-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   flex-direction: row;
   flex-wrap: wrap;
   margin: 0;
@@ -781,15 +781,20 @@ body {
 
 .catalog-card-type,
 .catalog-card-price {
+  display: flex;
   margin: 0;
   margin-bottom: 16px;
   margin-right: 25px;
   padding: 0;
-  width: calc((100% / 2) - 25px);
+  width: calc((100% / 2) - 16px);
   font-size: 18px;
   font-weight: 400;
   line-height: 23px;
   color: var(--color-dark);
+}
+
+.catalog-card-price {
+  margin: 0;
 }
 
 .catalog-btn {
@@ -802,7 +807,8 @@ body {
 }
 
 .catalog-card-btn {
-  padding: 13px 13px 10px 13px;
+  box-sizing: border-box;
+  padding: 8px 23px 8px 23px;
   border-radius: 4px;
   font-size: 16px;
   font-weight: 700;
@@ -815,7 +821,8 @@ body {
 }
 
 .btn-favourites {
-  padding: 13px 20px 10px 20px;
+  box-sizing: border-box;
+  padding: 8px 20px 8px 21px;
   border-radius: 4px;
   font-size: 16px;
   font-weight: 700;
@@ -828,6 +835,7 @@ body {
 }
 
 .btn-favourites-added {
+  padding: 8px 17px 8px 20px;
   background-color: var(--color-light-green);
 }
 
@@ -841,7 +849,7 @@ body {
 }
 
 .raiting-value {
-  padding: 9px 34px 10px 34px;
+  padding: 8px 33px 8px 33px;
   border-radius: 4px;
   font-size: 16px;
   font-weight: 400;
@@ -855,6 +863,7 @@ body {
 /* Пагинация */
 
 .pagination-show-more {
+  box-sizing: border-box;
   margin: 24px 72px 0 72px;
   border-top: 1px solid var(--color-light-grey);
   border-bottom: 1px solid var(--color-light-grey);
@@ -862,15 +871,16 @@ body {
 }
 
 .pagination-btn{
-  margin: 30px 218px;
+  margin: 30px 220px;
   padding-top: 17px;
-  padding-bottom: 17px;
+  padding-bottom: 16px;
   border: none;
   border-radius: 4px;
   width: 620px;
   font-size: 20px;
   font-weight: 700;
   line-height: 26px;
+  letter-spacing: -0.09em;
   text-align: center;
   text-transform: uppercase;
   color: var(--color-white);
@@ -971,12 +981,9 @@ body {
   background-color: var(--color-light);
 }
 
-.subscribe-button {
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 26px;
-  text-align: center;
-  text-transform: uppercase;
-  color: var(--color-white);
-  background-color: var(--color-light-blue);
+.catalog-mailling-subscribe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
