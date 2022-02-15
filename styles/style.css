@@ -68,6 +68,7 @@ body {
 }
 
 .main-nav-logo {
+  z-index: 1;
   position: absolute;
   display: block;
   width: 140px;
@@ -139,8 +140,7 @@ body {
 .user-nav-link {
   display: flex;
   margin: 0;
-  padding-top: 22px;
-  padding-bottom: 23px;
+  align-items: center;
   padding-left: 11px;
   padding-right: 11px;
   min-width: 20px;
@@ -148,13 +148,13 @@ body {
 }
 
 .user-nav-link-favorite {
-  padding: 0;
+  position: relative;
 }
 
 .counter-value {
-  position: relative;
-  top: -10px;
-  left: -10px;
+  position: absolute;
+  top: -9px;
+  left: 24px;
   width: 20px;
   height: 20px;
   font-size: 10px;
@@ -277,7 +277,7 @@ body {
 .privilege-item-text {
   padding: 0 75px;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 87px;
   min-width: 250px;
   font-size: 18px;
   font-weight: 400;
@@ -460,30 +460,34 @@ body {
   border-radius: 10px 0 0 10px;
   border: none;
   background-color: var(--color-white);
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
 }
 
 .subscribe-field::placeholder {
-  padding-left: 21px;
+  font-family: "PT Sans", sans-serif;
+  padding-left: 22px;
   padding-right: 19px;
   font-size: 18px;
   font-weight: 400;
   line-height: 26px;
-  letter-spacing: -0.03em;
   color: var(--color-black);
   opacity: 0.6;
 }
 
-.subscribe-button {   /* текст в кнопке растягивается*/
+.subscribe-button {
   box-sizing: border-box;
   width: 200px;
   height: 60px;
   padding: 0 auto;
   border-radius: 0 10px 10px 0;
   border: none;
+  font-family: "PT Sans", sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 20px;
-  letter-spacing: -0.11em;
   text-align: center;
   text-transform: uppercase;
   color: var(--color-white);
@@ -511,19 +515,26 @@ body {
   align-items: center;
   margin: 0;
   padding: 0;
+  padding-top: 3px;
   margin-right: auto;
   max-width: 240px;
   min-width: 107px;
   list-style-type: none;
 }
 
-.phone {     /* у номера курсивный шрифт*/
+.footer-contacts {
+  font-style: normal;
+}
+
+.phone {
   display: block;
-  padding-top: 8px;
+  padding-top: 9px;
+  padding-left: 9px;
   width: 720px;
   font-size: 40px;
   font-weight: 400;
   line-height: 40px;
+  font-style: normal;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
@@ -537,13 +548,12 @@ body {
 
 .footer-logo-link {
   display: block;
-  padding-top: 10px;
+  padding-top: 11px;
   padding-bottom: 3px;
 }
 
 .socials-link {
   display: flex;
-  /* padding-right: 20px; */
 }
 
 /* Каталог */
@@ -555,7 +565,7 @@ body {
   margin-right: 72px;
 }
 
-.filter-wrapper {   /* Почему под главной навигацией у фона появилась выемка*/
+.filter-wrapper {
   position: relative;
   margin: 0 auto;
   background-color: var(--color-dark);
@@ -567,7 +577,7 @@ body {
 .catalog-filter-container {
   display: flex;
   flex-direction: row;
-  padding-bottom: 83px;
+  padding-bottom: 82px;
 }
 
 .catalog-filter:nth-child(2) {
@@ -583,7 +593,7 @@ body {
   flex-direction: column;
 }
 
-.inner-header-title {  /*Почему-то у меня область заголовка на 10px выше, из-за этого коричневый фон торчит.*/
+.inner-header-title {
   padding: 0;
   padding-top: 35px;
   margin: 0;
@@ -683,7 +693,7 @@ body {
   min-width: 1057px;
   padding-top: 44px;
   padding-bottom: 53px;
-  padding-left: 71px;
+  padding-left: 72px;
   padding-right: 72px;
   background-color: var(--color-white);
   color: var(--color-black);
@@ -704,16 +714,15 @@ body {
 .select-sorting {
   box-sizing: border-box;
   margin: 0;
-  margin-right: 81px;
-  padding: 0;
-  padding-left: 14px;
+  margin-right: 80px;
+  padding-left: 13px;
   width: 287px;
   border: 2px solid var(--color-light-grey);
   border-radius: 4px;
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 23px;
-  letter-spacing: -0.05em;
   color: var(--color-dark);
 }
 
@@ -748,17 +757,21 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   margin: 0;
-  padding-left: 70px;
-  padding-right: 70px;
+  padding-left: 72px;
+  padding-right: 72px;
   list-style-type: none;
 }
 
 .catalog-card {
-  margin-right: 10px;
+  margin-right: 18px;
   margin-bottom: 10px;
-  width: 339px;
+  width: 340px;
   background-color: var(--color-white);
   color: var(--color-black);
+}
+
+.catalog-card:nth-child(3) {
+  margin-right: 0;
 }
 
 .catalog-link {
@@ -792,7 +805,7 @@ body {
   display: flex;
   margin: 0;
   margin-bottom: 16px;
-  margin-right: 25px;
+  margin-right: 24px;
   padding: 0;
   width: calc((100% / 2) - 16px);
   font-size: 18px;
@@ -880,18 +893,17 @@ body {
 
 .pagination-btn{
   position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 30px  0;
+  display: block;
+  margin: 30px auto;
   padding-top: 17px;
   padding-bottom: 16px;
   border: none;
   border-radius: 4px;
   width: 620px;
+  font-family: "PT Sans", sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 26px;
-  letter-spacing: -0.09em;
   text-align: center;
   text-transform: uppercase;
   color: var(--color-white);
