@@ -870,6 +870,7 @@ body {
   order: -2;
   margin: 0;
   padding: 0;
+  object-fit: cover;
 }
 
 .catalog-card-type,
