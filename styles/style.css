@@ -561,8 +561,7 @@ body {
 /* Фильтр */
 
 .filter {
-  margin-left: 71px;
-  margin-right: 72px;
+  margin: 0 72px;
 }
 
 .filter-wrapper {
@@ -572,14 +571,6 @@ body {
   background-image: url("../images/catalog-main-background.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
-}
-
-.catalog-filter-container {
-  width: 1060px;
-  display: grid;
-  grid-template-columns: 205px 205px 450px min-content;
-  gap: 12px;
-  padding-bottom: 82px;
 }
 
 .catalog-filter-group {
@@ -595,9 +586,7 @@ body {
 .inner-header-title {
   padding: 0;
   padding-top: 40px;
-  margin: 0;
-  margin-left: 72px;
-  margin-right: 72px;
+  margin: 0 72px;
   font-size: 60px;
   font-weight: 700;
   line-height: 68px;
@@ -635,26 +624,11 @@ body {
 /* Форма фильтра */
 
 .catalog-filter {
-  width: 200px;
-}
-
-.catalog-filter-1 {
-  grid-column: 1/2;
-
-}
-
-.catalog-filter-2 {
-  grid-column: 2/3;
-
-}
-
-.catalog-filter-3 {
-  grid-column: 3/4;
-  position: relative;
-}
-
-.catalog-filter-btn  {
-  grid-column: 4/5;
+  width: 1060px;
+  display: grid;
+  grid-template-columns: 205px 205px 450px min-content;
+  gap: 12px;
+  padding-bottom: 82px;
 }
 
 .catalog-filter-title {
@@ -667,7 +641,7 @@ body {
   color: var(--color-white);
 }
 
-.catalog-filter-3 .catalog-filter-title {
+.catalog-filter-group:nth-child(3) .catalog-filter-title {
   padding-left: 94px;
 }
 
@@ -831,16 +805,15 @@ body {
 
 .catalog-list {
   display: grid;
-  grid-template-columns: repeat(3, 358px);
+  grid-template-columns: repeat(3, 340px);
+  column-gap: 18px;
+  row-gap: 10px;
   margin: 0;
-  padding-left: 72px;
-  padding-right: 72px;
+  padding: 0 72px;
   list-style-type: none;
 }
 
 .catalog-card {
-  margin-right: 18px;
-  margin-bottom: 10px;
   width: 340px;
   background-color: var(--color-white);
   color: var(--color-black);
