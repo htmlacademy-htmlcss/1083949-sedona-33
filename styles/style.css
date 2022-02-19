@@ -169,8 +169,8 @@ body {
 .user-nav-link-btn {
   display: block;
   border-radius: 4px;
-  padding: 9px 35px 8px 34px;
-  margin: 13px 0px 14px 20px;
+  padding: 8px 34px;
+  margin: 14px 0px 14px 20px;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
@@ -437,8 +437,7 @@ body {
 }
 
 .mailling-text {
-  padding-left: 120px;
-  padding-right: 120px;
+  padding: 0 120px;
   margin: 0 240px 46px 240px;
   font-size: 22px;
   font-weight: 400;
@@ -504,7 +503,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 30px 72px 30px 72px;
+  padding: 30px 72px;
   border-top: 1px solid var(--color-light-grey);
 }
 
@@ -549,7 +548,6 @@ body {
 .footer-logo-link {
   display: block;
   padding-top: 11px;
-  padding-bottom: 3px;
 }
 
 .socials-link {
@@ -561,8 +559,7 @@ body {
 /* Фильтр */
 
 .filter {
-  margin-left: 72px;
-  margin-right: 72px;
+  margin: 0 72px;
 }
 
 .filter-wrapper {
@@ -574,18 +571,9 @@ body {
   background-size: 100% auto;
 }
 
-.catalog-filter-container {
-  display: flex;
-  flex-direction: row;
-  padding-bottom: 82px;
-}
-
-.catalog-filter:nth-child(2) {
-  width: 313px;
-}
-
 .catalog-filter-group {
-  width: 287px;
+  margin: 0;
+  padding: 0;
 }
 
 .catalog-filter-btn {
@@ -595,14 +583,11 @@ body {
 
 .inner-header-title {
   padding: 0;
-  padding-top: 35px;
-  margin: 0;
-  margin-bottom: 5px;
-  margin-left: 72px;
-  margin-right: 72px;
+  padding-top: 40px;
+  margin: 0 72px;
   font-size: 60px;
   font-weight: 700;
-  line-height: 78px;
+  line-height: 68px;
   color: var(--color-white);
 }
 
@@ -618,9 +603,10 @@ body {
 
 .breadcrumbs-link {
   display: flex;
-  align-items: center;
+  margin: 0;
+  padding: 0;
   padding-right: 13px;
-  margin-bottom: 35px;
+  margin-bottom: 45px;
   font-size: 16px;
   font-weight: 400;
   line-height: 21px;
@@ -628,7 +614,20 @@ body {
   text-decoration: none;
 }
 
+.breadcrumbs-link-hostel {
+  display: block;
+  align-items: flex-start;
+}
+
 /* Форма фильтра */
+
+.catalog-filter {
+  width: 1060px;
+  display: grid;
+  grid-template-columns: 205px 205px 450px min-content;
+  gap: 12px;
+  padding-bottom: 82px;
+}
 
 .catalog-filter-title {
   margin: 0;
@@ -638,6 +637,37 @@ body {
   font-weight: 700;
   line-height: 26px;
   color: var(--color-white);
+}
+
+.catalog-filter-group:nth-child(3) .catalog-filter-title {
+  padding-left: 94px;
+}
+
+.price {
+  box-sizing: border-box;
+  display: inline;
+  margin: 0;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  max-width: 142px;
+  border: 2px solid var(--color-white);
+  border-radius: 4px;
+  background-color: transparent;
+  color: var(--color-white);
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
+}
+
+.min-price {
+  margin-left: 95px;
+}
+
+.range {
+  margin-left: 94px;
+  width: 287px;
 }
 
 .catalog-filter-group {
@@ -667,7 +697,21 @@ body {
   color: var(--color-white);
 }
 
+.checkpoint-input[type='checkbox'] {
+  margin-right: 18px;
+}
+
+.checkpoint-input[type='radio'] {
+  margin-right: 18px;
+}
+
 .catalog-filter .button {
+  margin-top: 60px;
+  padding: 13px 35px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  font-family: "PT Sans", sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 21px;
@@ -678,11 +722,17 @@ body {
 }
 
 .catalog-filter .reset {
+  box-sizing: border-box;
+  border: none;
+  margin-top: 20px;
+  padding: 0 18px;
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 23px;
   text-align: center;
   color: var(--color-white);
+  background-color: transparent;
 }
 
 /* Сортировка */
@@ -752,26 +802,20 @@ body {
 }
 
 .catalog-list {
-  display: flex;
-  justify-content: start;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  column-gap: 18px;
+  row-gap: 10px;
   margin: 0;
-  padding-left: 72px;
-  padding-right: 72px;
+  margin-bottom: 34px;
+  padding: 0 72px;
   list-style-type: none;
 }
 
 .catalog-card {
-  margin-right: 18px;
-  margin-bottom: 10px;
   width: 340px;
   background-color: var(--color-white);
   color: var(--color-black);
-}
-
-.catalog-card:nth-child(3) {
-  margin-right: 0;
 }
 
 .catalog-link {
@@ -798,6 +842,7 @@ body {
   order: -2;
   margin: 0;
   padding: 0;
+  object-fit: cover;
 }
 
 .catalog-card-type,
@@ -829,7 +874,7 @@ body {
 
 .catalog-card-btn {
   box-sizing: border-box;
-  padding: 8px 22px 8px 23px;
+  padding: 8px 23px;
   border-radius: 4px;
   font-size: 16px;
   font-weight: 700;
@@ -843,7 +888,7 @@ body {
 
 .btn-favourites {
   box-sizing: border-box;
-  padding: 8px 20px 8px 22px;
+  padding: 8px 20px;
   border-radius: 4px;
   font-size: 16px;
   font-weight: 700;
@@ -856,7 +901,7 @@ body {
 }
 
 .btn-favourites-added {
-  padding: 8px 17px 8px 20px;
+  padding: 8px 18px;
   background-color: var(--color-light-green);
 }
 
@@ -865,12 +910,13 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 0 20px 20px 20px;
+  margin: 20px;
+  margin-top: 0;
   padding: 0px;
 }
 
 .raiting-value {
-  padding: 8px 33px 8px 33px;
+  padding: 8px 33px;
   border-radius: 4px;
   font-size: 16px;
   font-weight: 400;
@@ -885,7 +931,8 @@ body {
 
 .pagination-show-more {
   box-sizing: border-box;
-  margin: 24px 72px 0 72px;
+  margin: 24px 72px;
+  margin-bottom: 0;
   border-top: 1px solid var(--color-light-grey);
   border-bottom: 1px solid var(--color-light-grey);
   background-color: var(--color-white);
@@ -895,8 +942,7 @@ body {
   position: relative;
   display: block;
   margin: 30px auto;
-  padding-top: 17px;
-  padding-bottom: 16px;
+  padding: 16px 0;
   border: none;
   border-radius: 4px;
   width: 620px;
@@ -983,9 +1029,8 @@ body {
   margin: 0;
   background-color: var(--color-white);
   color: var(--color-black);
-  padding-left: 200px;
-  padding-right: 200px;
-  padding-bottom: 140px;
+  padding: 140px 200px;
+  padding-top: 0;
 }
 
 .catalog-mailling-title {
@@ -1001,9 +1046,8 @@ body {
 }
 
 .catalog-mailling-text {
-  padding-left: 165px;
-  padding-right: 165px;
-  padding-bottom: 46px;
+  padding: 46px 165px;
+  padding-top: 0;
   margin: 0;
   font-size: 22px;
   font-weight: 400;

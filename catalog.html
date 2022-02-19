@@ -52,79 +52,77 @@
             <!--Хлебные крошки-->
             <ul class="breadcrumbs">
               <li class="breadcrumbs-item">
-                <a class="breadcrumbs-link breadcrumbs-link-main" href="catalog.html">
-                  <span class="visually-hidden">Каталог.</span>
+                <a class="breadcrumbs-link" href="catalog.html">
+                  <svg width="12" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 .3 0 5.8V12h12V5.8L6 .3ZM11 11H1V6.2l5-4.5 5 4.5V11Z" fill="#fff"/><path d="M4 10h1V7.5h2V10h1V6.5H4V10Z" fill="#fff"/></svg>
                 </a>
               </li>
               <li class="breadcrumbs-item">
-                <a class="breadcrumbs-link">Гостиницы</a>
+                <a class="breadcrumbs-link breadcrumbs-link-hostel">Гостиницы</a>
               </li>
             </ul>
             <!--Фильтр-->
             <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-             <!--1-й блок фильтра-->
-              <div class="catalog-filter-container">
-                <fieldset class="catalog-filter-group">
-                  <legend class="catalog-filter-title">Инфраструктура:</legend>
-                  <ul class="catalog-filter-list">
-                    <li class="catalog-filter-item">
-                      <label class="checkpoint">
-                        <input class="checkpoint-input" type="checkbox" name="swimming-pool" checked>
-                        Бассейн
-                      </label>
-                    </li>
-                    <li class="catalog-filter-item">
-                      <label class="checkpoint">
-                        <input class="checkpoint-input" type="checkbox" name="parking" checked>
-                        Парковка
-                      </label>
-                    </li>
-                    <li class="catalog-filter-item">
-                      <label class="checkpoint">
-                        <input class="checkpoint-input" type="checkbox" name="Wi-Fi">
-                        Wi-Fi
-                      </label>
-                    </li>
-                  </ul>
-                </fieldset>
-                <!--2-ой блок фильтра-->
-                <fieldset class="catalog-filter-group">
-                  <legend class="catalog-filter-title">Тип жилья:</legend>
-                  <ul class="catalog-filter-list">
-                    <li class="catalog-filter-item">
-                      <label class="checkpoint">
-                        <input class="checkpoint-input" type="radio" name="type-of-housing" value="hostel" checked>
-                        Гостиница
-                      </label>
-                    </li>
-                    <li class="catalog-filter-item">
-                      <label class="checkpoint">
-                        <input class="checkpoint-input" type="radio" name="type-of-housing" value="motel">
-                         Мотель
-                      </label>
-                    </li>
-                    <li class="catalog-filter-item">
-                      <label class="checkpoint">
-                        <input class="checkpoint-input" type="radio" name="type-of-housing" value="appartaments">
-                        Апартаменты
-                      </label>
-                    </li>
-                  </ul>
-                </fieldset>
-                <!--3-й блок фильтра-->
-                <fieldset class="catalog-filter-group">
-                  <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-                  <label class="visually-hidden" for="min-price">от.</label>
-                  <input class="min-price price" type="text" id="min-price" name="min-price" value="0" placeholder="от">
-                  <label class="visually-hidden" for="max-price">до.</label>
-                  <input class="max-price price" type="text" id="max-price" name="max-price" value="9000" placeholder="до">
-                  <label class="checkpoint" for="range"></label>
-                  <input class="range" type="range" id="range" name="range" min="0" max="15000" step="100" value="9000">
-                </fieldset>
-                <div class="catalog-filter-btn">
-                  <button class="button" type="submit">Применить</button>
-                  <button class="reset" type="reset">Сбросить</button>
-                </div>
+              <!--1-й блок фильтра-->
+              <fieldset class="catalog-filter-group">
+                <legend class="catalog-filter-title">Инфраструктура:</legend>
+                <ul class="catalog-filter-list">
+                  <li class="catalog-filter-item">
+                    <label class="checkpoint">
+                      <input class="checkpoint-input" type="checkbox" name="swimming-pool" checked>
+                      Бассейн
+                    </label>
+                   </li>
+                  <li class="catalog-filter-item">
+                    <label class="checkpoint">
+                      <input class="checkpoint-input" type="checkbox" name="parking" checked>
+                      Парковка
+                    </label>
+                  </li>
+                  <li class="catalog-filter-item">
+                    <label class="checkpoint">
+                      <input class="checkpoint-input" type="checkbox" name="Wi-Fi">
+                      Wi-Fi
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+              <!--2-ой блок фильтра-->
+              <fieldset class="catalog-filter-group">
+                <legend class="catalog-filter-title">Тип жилья:</legend>
+                <ul class="catalog-filter-list">
+                   <li class="catalog-filter-item">
+                    <label class="checkpoint">
+                       <input class="checkpoint-input" type="radio" name="type-of-housing" value="hostel" checked>
+                       Гостиница
+                    </label>
+                  </li>
+                  <li class="catalog-filter-item">
+                    <label class="checkpoint">
+                      <input class="checkpoint-input" type="radio" name="type-of-housing" value="motel">
+                       Мотель
+                    </label>
+                  </li>
+                  <li class="catalog-filter-item">
+                    <label class="checkpoint">
+                      <input class="checkpoint-input" type="radio" name="type-of-housing" value="appartaments">
+                      Апартаменты
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+              <!--3-й блок фильтра-->
+              <fieldset class="catalog-filter-group">
+                <legend class="catalog-filter-title">Стоимость, ₽:</legend>
+                <label class="visually-hidden" for="min-price">от.</label>
+                <input class="min-price price" type="text" id="min-price" name="min-price" value="0" placeholder="от">
+                <label class="visually-hidden" for="max-price">до.</label>
+                <input class="max-price price" type="text" id="max-price" name="max-price" value="9000" placeholder="до">
+                <label class="checkpoint" for="range"></label>
+                <input class="range" type="range" id="range" name="range" min="0" max="15000" step="100" value="9000">
+              </fieldset>
+              <div class="catalog-filter-btn">
+                <button class="button" type="submit">Применить</button>
+                <button class="reset" type="reset">Сбросить</button>
               </div>
             </form>
           </section>
