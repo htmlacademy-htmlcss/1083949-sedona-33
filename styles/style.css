@@ -313,15 +313,6 @@ body {
   counter-reset: counter-privilege;
 }
 
-
-
-/* .privilege-item::before {
-  position:absolute;
-  top: 183px;
-  left: 170px;
-
-} */
-
 .privilege-item-title {
   margin-top: 98px;
   margin-bottom: 30px;
@@ -348,12 +339,6 @@ body {
 .privilege-item-picture .privilege-item-title::after {
   color: var(--color-white);
 }
-
-/* .privilege-item-picture:last-child::before {
-  position: absolute;
-  top: 183px;
-  left: 555px;
-} */
 
 .privilege-item-picture .privilege-item-title {
   margin-top: 98px;
