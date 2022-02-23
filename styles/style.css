@@ -260,13 +260,18 @@ body {
   background-color: var(--color-light-brown);
 }
 
-/* .promo-img-background::after {
+.promo-img-container::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  content: "";
   background-image: url("../images/divider-main-background.svg");
   background-repeat: no-repeat;
-  background-size: 100% auto;
   background-position: bottom;
-
-} */
+  background-size: 100% auto;
+}
 
 .promo-img-inscription {
   position: absolute;
