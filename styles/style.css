@@ -313,25 +313,51 @@ body {
   counter-reset: counter-privilege;
 }
 
+
+
 /* .privilege-item::before {
-  counter-increment: counter-privilege;
-  content: counter(counter-privilege);
+  position:absolute;
+  top: 183px;
+  left: 170px;
+
 } */
 
 .privilege-item-title {
   margin-top: 98px;
-  margin-bottom: 80px;
+  margin-bottom: 30px;
   padding: 0 130px;
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
   text-align: center;
   text-transform: uppercase;
-  color: var(--color-black);
+  color: var(--color-dark);
 }
+
+.privilege-item-title::after {
+  display: block;
+  padding-top: 28px;
+  counter-increment: counter-privilege;
+  content: "— №"counter(counter-privilege)" —";
+  color: var(--color-black);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.privilege-item-picture .privilege-item-title::after {
+  color: var(--color-white);
+}
+
+/* .privilege-item-picture:last-child::before {
+  position: absolute;
+  top: 183px;
+  left: 555px;
+} */
+
 .privilege-item-picture .privilege-item-title {
   margin-top: 98px;
-  margin-bottom: 80px;
+  margin-bottom: 30px;
   padding: 0 90px;
 }
 
@@ -343,7 +369,7 @@ body {
 .privilege-item-text {
   padding: 0 75px;
   margin-top: 0;
-  margin-bottom: 87px;
+  margin-bottom: 37px;
   min-width: 250px;
   font-size: 18px;
   font-weight: 400;
@@ -383,6 +409,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+  color: var(--color-white);
   background-color: var(--color-light-blue);
 }
 
