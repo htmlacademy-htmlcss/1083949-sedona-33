@@ -78,11 +78,6 @@ body {
   margin: 0;
 }
 
-.main-nav-logo:focus-visible,
-.main-nav-logo-img:focus-visible {
-  outline: none;
-}
-
 .main-nav {
   display: flex;
   margin: 0 auto;
@@ -113,7 +108,6 @@ body {
   text-align: center;
   background-color: var(--color-white);
   text-decoration: none;
-  outline: none;
 }
 
 .site-navigation-link:hover {
@@ -166,7 +160,6 @@ body {
   color: var(--color-black);
   background-color: var(--color-white);
   text-decoration: none;
-  outline: none;
 }
 
 .user-nav-link-favorite {
@@ -577,7 +570,7 @@ body {
   box-sizing: border-box;
   width: 600px;
   height: 60px;
-  padding: 0;
+  padding: 0 22px;
   border: none;
   border-radius: 10px 0 0 10px;
   background-color: var(--color-light);
@@ -604,8 +597,6 @@ body {
 
 .subscribe-field::placeholder {
   font-family: "PT Sans", sans-serif;
-  padding-left: 22px;
-  padding-right: 19px;
   font-size: 18px;
   font-weight: 400;
   line-height: 26px;
