@@ -862,6 +862,11 @@ body {
   border-radius: 4px;
 }
 
+.breadcrumbs-link:active {
+  opacity: 0.3;
+}
+
+
 .breadcrumbs-link-icon {
   position: absolute;
   top: 0;
