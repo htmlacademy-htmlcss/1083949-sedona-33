@@ -31,7 +31,6 @@
   --color-warm-light: rgba(131, 179, 211, 0.2);
   --color-warm-active: rgba(117, 98, 87, 0.3);
   --color-white-active: rgba(255, 255, 255, 0.3);
-  --color-checked: #3f5e72;
 }
 
 html {
@@ -939,6 +938,7 @@ body {
 .checkpoint {
   position: relative;
   display: block;
+  cursor: pointer;
   padding-left: 39px;
   font-size: 18px;
   font-weight: 400;
@@ -970,7 +970,8 @@ body {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
-.checkpoint:focus .checkpoint-mark {
+.checkpoint:focus .checkpoint-mark,
+.checkpoint:focus-within .checkpoint-mark {
   box-sizing: border-box;
   background-color: rgba(255, 255, 255, 0.6);
   box-shadow: 0 0 0 3px var(--color-light-blue);
@@ -1012,6 +1013,7 @@ body {
 }
 
 .price {
+  position: relative;
   box-sizing: border-box;
   display: inline-block;
   margin: 0;
@@ -1031,18 +1033,52 @@ body {
 .min-price {
   box-sizing: border-box;
   border: 2px solid var(--color-white);
-  border-right: none;
+  border-right: 1px solid var(--color-white);
   border-radius: 4px 0 0 4px;
 }
 
 .max-price {
   box-sizing: border-box;
   border: 2px solid var(--color-white);
+  border-left: 1px solid var(--color-white);
   border-radius: 0 4px 4px 0;
 }
 
+.min-price:hover {
+  box-sizing: border-box;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-right: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.max-price:hover {
+  box-sizing: border-box;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-left: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.min-price:focus {
+  box-sizing: border-box;
+  border: 2px solid var(--color-white);
+  border-right: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0px 0px 0px 3px #81B3D2, inset 0px 0px 0px 3px #81B3D2;
+  outline: none;
+}
+
+.max-price:focus {
+  box-sizing: border-box;
+  border: 2px solid var(--color-white);
+  border-left: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0px 0px 0px 3px #81B3D2, inset 0px 0px 0px 3px #81B3D2;
+  outline: none;
+}
+
+.price:active {
+  background-color: var(--color-light-brown);
+}
+
 /* Почему-то placeholder не визуализируется */
-.price::placeholder {
+.min-price-label,
+.max-price-label {
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -1053,6 +1089,18 @@ body {
 
 .min-price {
   margin-left: 95px;
+}
+
+.min-price-label {
+  position: absolute;
+  top: 246px;
+  left: 712px;
+}
+
+.max-price-label {
+  position: absolute;
+  top: 246px;
+  left: 850px;
 }
 
 .range {
@@ -1213,11 +1261,16 @@ body {
   display: inline-block;
   margin: 0;
   margin-right: auto;
-  padding: 11px 13px;
+  padding: 11px 19px;
+  padding-right: 90px;
   width: 285px;
   border: none;
   box-shadow: inset 0 0 0 2px var(--color-light-grey);
+  background-image: url("../images/icons/dropdown.svg");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
   border-radius: 4px;
+  appearance: none;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -1672,6 +1725,16 @@ body {
   height: 48px;
   margin-left: 49px;
   margin-top: 2px;
+  padding: 11px 14px;
+  padding-right: 20px;
+  background-image: url("../images/icons/dropdown.svg");
+  background-repeat: no-repeat;
+  background-position: right 19px center;
+  appearance: none;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
 }
 
 /* Подписка на странице каталога */
