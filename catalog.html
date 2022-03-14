@@ -7,12 +7,11 @@
     <title>Каталог</title>
   </head>
   <body>
-    <!--Главная навигация-->
     <div class="page-container">
       <header class="main-header">
         <nav class="main-nav">
           <a class="main-nav-logo logo" href="index.html">
-            <img class="main-nav-logo-img" src="images/logo.svg" width="139" height="70" alt="Логотип Sedona.">
+            <img class="main-nav-logo-img" src="images/logo.svg" width="139" height="70" alt="На главную.">
           </a>
           <ul class="site-navigation-list">
             <li class="site-navigation-item">
@@ -45,17 +44,15 @@
           </ul>
         </nav>
       </header>
-      <!--Главная страница каталога-->
       <main class="main-inner main-container">
         <div class="filter-wrapper">
           <h1 class="inner-header-title">Гостиницы Седоны</h1>
-          <!--Блок каталога с фильтром-->
           <section class="filter">
             <h2 class="visually-hidden">Фильтры.</h2>
-            <!--Хлебные крошки-->
             <ul class="breadcrumbs">
               <li class="breadcrumbs-item">
                 <a class="breadcrumbs-link breadcrumbs-link-icon" href="catalog.html">
+                  <span class="visually-hidden">Главная.</span>
                   <svg class="breadcrumbs-icon" width="12" height="12" aria-hidden="true" focusable="false" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 .3 0 5.8V12h12V5.8L6 .3ZM11 11H1V6.2l5-4.5 5 4.5V11Z" fill="#fff"/><path d="M4 10h1V7.5h2V10h1V6.5H4V10Z" fill="#fff"/></svg>
                 </a>
               </li>
@@ -63,9 +60,7 @@
                 <a class="breadcrumbs-link breadcrumbs-link-hostel" href="#">Гостиницы</a>
               </li>
             </ul>
-            <!--Фильтр-->
             <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-              <!--1-й блок фильтра-->
               <fieldset class="catalog-filter-group">
                 <legend class="catalog-filter-title">Инфраструктура:</legend>
                 <ul class="catalog-filter-list">
@@ -75,7 +70,7 @@
                       <span class="checkpoint-mark"></span>
                       <span class="checkpoint-label">Бассейн</span>
                     </label>
-                   </li>
+                  </li>
                   <li class="catalog-filter-item">
                     <label class="checkpoint">
                       <input class="visually-hidden checkpoint-input" type="checkbox" name="parking" checked>
@@ -92,15 +87,14 @@
                   </li>
                 </ul>
               </fieldset>
-              <!--2-ой блок фильтра-->
               <fieldset class="catalog-filter-group">
                 <legend class="catalog-filter-title">Тип жилья:</legend>
                 <ul class="catalog-filter-list">
-                   <li class="catalog-filter-item">
+                  <li class="catalog-filter-item">
                     <label class="checkpoint">
-                       <input class="visually-hidden checkpoint-input" type="radio" name="type-of-housing" value="hostel" checked>
-                       <span class="checkpoint-mark"></span>
-                       <span class="checkpoint-label">Гостиница</span>
+                      <input class="visually-hidden checkpoint-input" type="radio" name="type-of-housing" value="hostel" checked>
+                      <span class="checkpoint-mark"></span>
+                      <span class="checkpoint-label">Гостиница</span>
                     </label>
                   </li>
                   <li class="catalog-filter-item">
@@ -119,7 +113,6 @@
                   </li>
                 </ul>
               </fieldset>
-              <!--3-й блок фильтра-->
               <fieldset class="catalog-filter-group">
                 <legend class="catalog-filter-title">Стоимость, ₽:</legend>
                 <div class="range-wrapper-inputs">
@@ -137,7 +130,7 @@
                       <button class="range-toggle toggle-max" type="button">
                         <span class="visually-hidden">Изменить максимальную цену.</span>
                       </button>
-                  </div>
+                    </div>
                   </div>
                 </div>
               </fieldset>
@@ -148,7 +141,6 @@
             </form>
           </section>
         </div>
-        <!--Сортировка-->
         <section class="sorting">
           <h2 class="visually-hidden">Сортировка.</h2>
           <p class="sorting-search">Найдено гостиниц: 38</p>
@@ -174,7 +166,6 @@
             </div>
           </div>
         </section>
-        <!--Каталог гостиниц-->
         <section class="catalog">
           <h2 class="visually-hidden">Каталог.</h2>
           <ul class="catalog-list">
@@ -199,18 +190,18 @@
               </div>
             </li>
             <li class="catalog-card">
-                <div class="catalog-card-wrapper">
-                  <h3 class="catalog-card-title">Desert Quail Inn</h3>
-                  <a class="catalog-link" href="#">
-                    <img class="catalog-img" src="images/catalog/hotel-2.jpg" width="300" height="206" alt="Фото гостиницы Desert Quail Inn.">
-                  </a>
-                  <p class="catalog-card-type">Гостиница</p>
-                  <p class="catalog-card-price">От 3000 ₽</p>
-                </div>
-                <div class="catalog-btn">
-                  <a class="catalog-card-btn" href="#">подробнее</a>
-                  <a class="btn-favourites" href="#">В избранное</a>
-                </div>
+              <div class="catalog-card-wrapper">
+                <h3 class="catalog-card-title">Desert Quail Inn</h3>
+                <a class="catalog-link" href="#">
+                  <img class="catalog-img" src="images/catalog/hotel-2.jpg" width="300" height="206" alt="Фото гостиницы Desert Quail Inn.">
+                </a>
+                <p class="catalog-card-type">Гостиница</p>
+                <p class="catalog-card-price">От 3000 ₽</p>
+              </div>
+              <div class="catalog-btn">
+                <a class="catalog-card-btn" href="#">подробнее</a>
+                <a class="btn-favourites" href="#">В избранное</a>
+              </div>
               <div class="raiting">
                 <span class="star-raiting star-raiting-3">
                   <span class="visually-hidden">3 звезды.</span>
@@ -295,7 +286,6 @@
             </label>
           </form>
         </div>
-        <!--Рассылка-->
         <section class="catalog-mailling">
           <h2 class="catalog-mailling-title">Подпишитесь на рассылку</h2>
           <p class="catalog-mailling-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
@@ -306,7 +296,6 @@
           </form>
         </section>
       </main>
-      <!--Подвал-->
       <footer class="footer">
         <div class="page-footer-container">
           <ul class="socials-list">
@@ -338,4 +327,4 @@
       </footer>
     </div>
   </body>
-  </html>
+</html>
