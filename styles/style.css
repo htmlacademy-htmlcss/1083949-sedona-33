@@ -32,7 +32,7 @@
   --color-warm-light: rgba(131, 179, 211, 0.2);
   --color-warm-active: rgba(117, 98, 87, 0.3);
   --color-white-active: rgba(255, 255, 255, 0.3);
-  --color-disabled: #545454;
+  --color-disabled: #bebcbc;
   --color-error: #ff5757;
   --color-selected: rgba(51, 51, 51, 0.3);
   --color-range: rgba(0, 0, 0, 0.4);
@@ -651,17 +651,18 @@ img {
 
 .subscribe-button:active {
   background-color: var(--color-dark-blue);
-  color: var(--color-white-active);
+  color: var(--color-disabled);
 }
 
 .subscribe-button:disabled,
 .subscribe-button:disabled:hover {
   background-color: var(--color-light-blue);
-  cursor: default;
+  color: var(--color-disabled);
+  cursor: not-allowed;
 }
 
 .subscribe-button:disabled:active {
-  color: var(--color-white);
+  color: var(--color-disabled);
 }
 
 .footer {
@@ -1495,11 +1496,11 @@ img {
   color: var(--color-disabled);
   background-color: var(--color-disabled);
   outline: none;
-  cursor: default;
+  cursor: not-allowed;
 }
 
 .checkpoint-input:disabled:hover ~ .checkpoint-label {
-  cursor: default;
+  cursor: not-allowed;
   color: var(--color-disabled);
 }
 
@@ -1611,19 +1612,17 @@ img {
 
 .price:disabled {
   color: var(--color-disabled);
-  cursor: default;
+  cursor: not-allowed;
   border: 2px solid var(--color-disabled);
   border-left: 1px solid var(--color-disabled);
-  box-shadow: 0 0 0 2px var(--color-disabled);
   opacity: 0.5;
 }
 
 .price:disabled:hover {
   color: var(--color-disabled);
-  cursor: default;
+  cursor: not-allowed;
   border: 2px solid var(--color-disabled);
   border-left: 1px solid var(--color-disabled);
-  box-shadow: 0 0 0 2px var(--color-disabled);
   outline: none;
   opacity: 0.5;
 }
@@ -1706,7 +1705,7 @@ img {
   border: 3px solid transparent;
   border-radius: 5px;
   background-color: var(--color-disabled);
-  cursor: default;
+  cursor: not-allowed;
 }
 
 .range-toggle:disabled:hover {
@@ -1714,7 +1713,7 @@ img {
   border: 3px solid transparent;
   border-radius: 5px;
   background-color: var(--color-disabled);
-  cursor: default;
+  cursor: not-allowed;
 }
 
 .toggle-min {
@@ -1770,14 +1769,14 @@ img {
 .catalog-filter .button:disabled,
 .catalog-filter .button:disabled:hover {
   box-sizing: border-box;
-  opacity: 0.3;
-  background-color: var(--color-disabled);
+  color: var(--color-disabled);
+  background-color: var(--color-light-blue);
   box-shadow: 0 0 0 3px var(--color-disabled);
   cursor: default;
 }
 
 .catalog-filter .button:disabled:active {
-  color: var(--color-white);
+  color: var(--color-disabled);
   cursor: default;
 }
 
@@ -2258,14 +2257,14 @@ img {
 
 .pagination-btn:disabled {
   box-sizing: border-box;
-  background-color: var(--color-disabled);
+  background-color: var(--color-light-blue);
   box-shadow: 0 0 0 3px var(--color-disabled);
-  opacity: 0.6;
+  color: var(--color-disabled);
   cursor: default;
 }
 
 .pagination-btn:disabled:active {
-  color: var(--color-white);
+  color: var(--color-disabled);
   cursor: default;
 }
 
@@ -2273,7 +2272,7 @@ img {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 30px 72px 62px;
+  padding: 30px 72px 63px;
   background-color: var(--color-white);
 }
 
@@ -2343,6 +2342,8 @@ img {
 }
 
 .count-filter {
+  display: flex;
+  justify-content: flex-end;
   text-align: end;
   padding: 0;
   padding-top: 4px;
@@ -2354,6 +2355,7 @@ img {
 }
 
 .count {
+  padding: 10px 0;
   font-size: 18px;
   font-weight: 400;
   line-height: 23px;
@@ -2361,6 +2363,7 @@ img {
 }
 
 .count-select {
+  flex-shrink: 0;
   position: relative;
   box-sizing: border-box;
   border: none;
@@ -2368,7 +2371,7 @@ img {
   border-radius: 4px;
   width: 160px;
   height: 48px;
-  margin-left: 49px;
+  margin-left: 51px;
   padding: 10px 16px;
   padding-right: 35px;
   background-image: url("../images/icons/dropdown.svg");
@@ -2473,6 +2476,6 @@ img {
 
 .subscribe-field:disabled,
 .subscribe-field:disabled:hover {
-  background-color: var(--color-light);
-  cursor: default;
+  background-color: var(--color-disabled);
+  cursor: not-allowed;
 }
