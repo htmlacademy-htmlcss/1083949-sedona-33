@@ -10,8 +10,8 @@
     <div class="page-container">
       <header class="main-header">
         <nav class="main-nav">
-          <a class="main-nav-logo logo" href="index.html">
-            <img class="main-nav-logo-img" src="images/logo.svg" width="139" height="70" alt="На главную.">
+          <a class="main-nav-logo logo" href="index.html" aria-label="На главную.">
+            <img class="main-nav-logo-img" src="images/logo.svg" aria-hidden="true" width="139" height="70" alt="Логотип Седоны.">
           </a>
           <ul class="site-navigation-list">
             <li class="site-navigation-item">
@@ -275,16 +275,16 @@
               <a class="pagination-link" href="#">10</a>
             </li>
           </ul>
-          <form class="count-filter">
-            <label class="count">
+          <div class="count-filter">
+            <label class="count" for="count-select">
               Гостиниц на странице:
-              <select class="count-select" id="count-select" name="count-select">
-                <option class="count-value" value="two">2</option>
-                <option class="count-value" value="four" selected>4</option>
-                <option class="count-value" value="eight">8</option>
-              </select>
             </label>
-          </form>
+            <select class="count-select" id="count-select" name="count-select">
+              <option class="count-value" value="two">2</option>
+              <option class="count-value" value="four" selected>4</option>
+              <option class="count-value" value="eight">8</option>
+            </select>
+          </div>
         </div>
         <section class="catalog-mailling">
           <h2 class="catalog-mailling-title">Подпишитесь на рассылку</h2>
