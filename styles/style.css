@@ -863,7 +863,7 @@ img {
   opacity: 0.3;
 }
 
-.modal-close-button:disabled:active .modal-close-icon  {
+.modal-close-button:disabled:active .modal-close-icon {
   opacity: 1;
   cursor: not-allowed;
 }
@@ -933,11 +933,6 @@ img {
   opacity: 0.5;
   cursor: not-allowed;
   box-shadow: none;
-}
-
-/* Добавить класс подписи при заблокированном .field */
-.modal-date-disabled {
-  color: var(--color-disabled);
 }
 
 /* Класс подписи для не верной даты */
@@ -1075,11 +1070,6 @@ img {
   background-color: var(--color-disabled);
   opacity: 0.5;
   cursor: not-allowed;
-}
-
-/* Добавить класс подписи при заблокированном .count-field */
-.modal-count-disabled {
-  color: var(--color-disabled);
 }
 
 .form-input-icon {
