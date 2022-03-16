@@ -855,7 +855,7 @@ img {
 
 .modal-close-button:focus {
   box-sizing: border-box;
-  box-shadow: 0 0 0 3px var(--color-light-blue);
+  box-shadow: inset 0 0 0 3px var(--color-light-blue);
   outline: none;
 }
 
@@ -863,12 +863,17 @@ img {
   opacity: 0.3;
 }
 
+.modal-close-button:disabled:active .modal-close-icon  {
+  opacity: 1;
+  cursor: not-allowed;
+}
+
 .modal-close-button:disabled,
 .modal-close-button:disabled:hover {
   box-sizing: border-box;
   background-color: var(--color-disabled);
   opacity: 0.3;
-  cursor: default;
+  cursor: not-allowed;
 }
 
 .modal-form-title {
@@ -924,9 +929,15 @@ img {
 .date-departure:disabled:hover,
 .date-arrival:disabled:active,
 .date-departure:disabled:active {
-  background-color: var(--color-light);
-  cursor: default;
+  background-color: var(--color-disabled);
+  opacity: 0.5;
+  cursor: not-allowed;
   box-shadow: none;
+}
+
+/* Добавить класс подписи при заблокированном .field */
+.modal-date-disabled {
+  color: var(--color-disabled);
 }
 
 /* Класс подписи для не верной даты */
@@ -1060,6 +1071,17 @@ img {
   appearance: none;
 }
 
+.count-field:disabled {
+  background-color: var(--color-disabled);
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Добавить класс подписи при заблокированном .count-field */
+.modal-count-disabled {
+  color: var(--color-disabled);
+}
+
 .form-input-icon {
   position: relative;
 }
@@ -1134,12 +1156,13 @@ img {
 .count-btn:disabled,
 .count-btn:disabled:hover {
   box-shadow: none;
-  cursor: default;
+  cursor: not-allowed;
 }
 
 .count-btn:disabled .count-icon,
 .count-btn:disabled:hover .count-icon {
   opacity: 1;
+  cursor: not-allowed;
 }
 
 .modal-adults {
@@ -1270,9 +1293,9 @@ img {
 
 .modal-button:disabled,
 .modal-button:disabled:hover {
-  background-color: var(--color-disabled);
-  opacity: 0.3;
-  cursor: default;
+  background-color: var(--color-light-blue);
+  color: var(--color-disabled);
+  cursor: not-allowed;
 }
 
 .modal-container-close {
