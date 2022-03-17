@@ -538,7 +538,7 @@ img {
   background-color: var(--color-dark-brown);
   background-image: url("../images/mailling-background.jpg");
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
   border-bottom: 1px solid var(--color-light-grey);
 }
 
@@ -583,10 +583,10 @@ img {
   line-height: 26px;
 }
 
-.subscribe-field-error {  /* класс ошибки для subscribe-field */
+.subscribe-field-invalid {  /* класс ошибки для subscribe-field */
   box-sizing: border-box;
   width: 600px;
-  padding: 0;
+  padding: 17px 22px;
   border: none;
   border-radius: 10px 0 0 10px;
   background-color: var(--color-light);
@@ -595,6 +595,14 @@ img {
   font-weight: 400;
   line-height: 26px;
   box-shadow: 0 0 0 2px var(--color-error);
+}
+
+/* Класс ошибки для subscribe-field */
+.subscribe-field-error,
+.subscribe-field-invalid:invalid {
+  box-sizing: border-box;
+  background-color: var(--color-light-grey);
+  box-shadow: 0 0 0 3px var(--color-error);
 }
 
 .subscribe-field::placeholder {
@@ -607,12 +615,12 @@ img {
 }
 
 .subscribe-field:hover,
-.subscribe-field-error:hover {
+.subscribe-field-invalid:hover {
   background-color: var(--color-light-grey);
 }
 
 .subscribe-field:focus,
-.subscribe-field-error:focus {
+.subscribe-field-invalid:focus {
   box-sizing: border-box;
   background-color: var(--color-light-grey);
   box-shadow: 0 0 0 3px var(--color-light-blue);
@@ -1298,7 +1306,7 @@ img {
   background-color: var(--color-dark);
   background-image: url("../images/catalog-main-background.jpg");
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
 }
 
 .filter {
@@ -1681,6 +1689,8 @@ img {
 
 .range-bar {
   position: absolute;
+  left: 0;
+  width: 227px;
   height: 4px;
   background-color: var(--color-white);
 }
@@ -1886,6 +1896,7 @@ img {
   font-size: 18px;
   font-weight: 400;
   line-height: 23px;
+  background-color: var(--color-white);
   color: var(--color-dark);
 }
 
@@ -2044,6 +2055,7 @@ img {
 
 .catalog-card-type,
 .catalog-card-price {
+  word-break: break-all;
   display: flex;
   margin: 0;
   margin-bottom: 16px;
@@ -2058,6 +2070,7 @@ img {
 
 .catalog-card-price {
   margin: 0;
+  margin-bottom: 16px;
 }
 
 .catalog-btn {
@@ -2070,11 +2083,13 @@ img {
 }
 
 .catalog-card-btn {
+  word-break: break-all;
   display: inline-block;
   box-sizing: border-box;
-  padding: 8px 23px;
+  padding: 8px 10px;
   margin-right: 13px;
   border-radius: 4px;
+  width: 133px;
   font-size: 16px;
   font-weight: 700;
   line-height: 21px;
@@ -2102,12 +2117,15 @@ img {
 }
 
 .btn-favourites {
+  word-break: break-all;
   display: inline-block;
   box-sizing: border-box;
   border: none;
-  padding: 8px 20px;
+  padding: 8px 10px;
   margin-left: 13px;
   border-radius: 4px;
+  width: 141px;
+  font-family: "PT Sans", sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 21px;
@@ -2137,13 +2155,27 @@ img {
   box-shadow: 0 0 0 1px var(--color-light-brown);
 }
 
+.btn-favourites:disabled,
+.btn-favourites:disabled:hover,
+.btn-favourites:disabled:focus {
+  background-color: var(--color-light-blue);
+  color: var(--color-disabled);
+  border: none;
+  outline: none;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
 .btn-favourites-added {
+  word-break: break-all;
   display: inline-block;
   box-sizing: border-box;
   border: none;
-  padding: 8px 18px;
+  padding: 8px 10px;
   margin-left: 13px;
   border-radius: 4px;
+  width: 141px;
+  font-family: "PT Sans", sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 21px;
@@ -2167,6 +2199,17 @@ img {
 
 .btn-favourites-added:active {
   color: var(--color-white-active);
+}
+
+.btn-favourites-added:disabled,
+.btn-favourites-added:disabled:hover,
+.btn-favourites-added:disabled:focus {
+  background-color: var(--color-disabled);
+  color: var(--color-grey);
+  border: none;
+  outline: none;
+  cursor: not-allowed;
+  box-shadow: none;
 }
 
 .raiting {
@@ -2387,6 +2430,7 @@ img {
   margin-left: 51px;
   padding: 10px 16px;
   padding-right: 35px;
+  background-color: var(--color-white);
   background-image: url("../images/icons/dropdown.svg");
   background-repeat: no-repeat;
   background-position: right 21px center;
