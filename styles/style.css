@@ -583,7 +583,7 @@ img {
   line-height: 26px;
 }
 
-.subscribe-field-invalid {  /* класс ошибки для subscribe-field */
+.subscribe-field-error {  /* класс ошибки для subscribe-field */
   box-sizing: border-box;
   width: 600px;
   padding: 17px 22px;
@@ -597,9 +597,7 @@ img {
   box-shadow: 0 0 0 2px var(--color-error);
 }
 
-/* Класс ошибки для subscribe-field */
-.subscribe-field-error,
-.subscribe-field-invalid:invalid {
+.subscribe-field:invalid {
   box-sizing: border-box;
   background-color: var(--color-light-grey);
   box-shadow: 0 0 0 3px var(--color-error);
@@ -615,12 +613,12 @@ img {
 }
 
 .subscribe-field:hover,
-.subscribe-field-invalid:hover {
+.subscribe-field-error:hover {
   background-color: var(--color-light-grey);
 }
 
 .subscribe-field:focus,
-.subscribe-field-invalid:focus {
+.subscribe-field-error:focus {
   box-sizing: border-box;
   background-color: var(--color-light-grey);
   box-shadow: 0 0 0 3px var(--color-light-blue);
